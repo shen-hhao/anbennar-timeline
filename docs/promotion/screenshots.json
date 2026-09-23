@@ -1,0 +1,117 @@
+{
+  "captureDate": "2026-09-23",
+  "siteRelease": "community-preview-20260923",
+  "publishedPagesCommit": "61632cc62068236a2d506fce85883a3814ddb04f",
+  "captureMethod": "Actual browser viewport screenshots; map and text were not redrawn or edited. Some captures are taken after scrolling.",
+  "scope": "Screenshots illustrate the existing community preview, including uncertainty and incomplete research. They are not new historical adoption or certification.",
+  "files": [
+    {
+      "file": "01-cannor-1444.jpg",
+      "displayedYear": 1444,
+      "subject": "洛伦特 A01",
+      "feature": "国家详情",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 62195,
+      "sha256": "ac9339378556d06df6f0c64f5a0207ffc8bdac5f94d7443cabde8eaaf46d72fe",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/"
+    },
+    {
+      "file": "02-events-1518.jpg",
+      "displayedYear": 1518,
+      "subject": "坎诺",
+      "feature": "事件面板：卡斯特洛斯死讯揭露",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 64616,
+      "sha256": "84825e5cb6322a748f0e2b16c6e4204673f9e8470160daaf8162c5b36ef73e79",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/"
+    },
+    {
+      "file": "03-jadd-rahen-1562.jpg",
+      "displayedYear": 1562,
+      "subject": "贾德帝国 F51 与拉亨",
+      "feature": "国家详情",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 76281,
+      "sha256": "e5ba48b4cae3e09799cbedb6d8f61b0d1a2ef273aa9dc90eec7491c48058f56f",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/"
+    },
+    {
+      "file": "04-haless-1783.jpg",
+      "displayedYear": 1783,
+      "subject": "灵域 R86 与东洲",
+      "feature": "国家详情",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 69654,
+      "sha256": "09f5ab9a5ccc5a00a3ff69d60e74466e45c7ca4d96d4f064e0c29898772a0a04",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/"
+    },
+    {
+      "file": "05-world-1820.jpg",
+      "displayedYear": 1820,
+      "subject": "全图",
+      "feature": "终点观察",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 61230,
+      "sha256": "94964648e90e3f620f98190c7b4d013f68fb262df0bd4717d7f55660faf11163",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/"
+    },
+    {
+      "file": "06-country-history.jpg",
+      "displayedYear": 1562,
+      "subject": "贾德帝国 F51",
+      "feature": "国家沿革",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 83626,
+      "sha256": "37ee4badad9799b485e5db4b66224c7fca018882117499ac9ed78133568fc662",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/"
+    },
+    {
+      "file": "07-research-overview.jpg",
+      "displayedYear": null,
+      "subject": null,
+      "feature": "资料库进度",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 42723,
+      "sha256": "6f050ccbaa04d364d1c29ab3a31ed4b5a1101245ff02333cefd6b06d50e88c3b",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/research.html"
+    },
+    {
+      "file": "08-research-country.jpg",
+      "displayedYear": null,
+      "subject": "eu4:F51",
+      "feature": "资料库国家档案",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 48469,
+      "sha256": "61ebd93a400b7bb1ebcc6986354100fbd11a7533fb3a770ebf326e27ab5a776b",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/research.html"
+    },
+    {
+      "file": "09-record-and-sources.jpg",
+      "displayedYear": 1562,
+      "subject": "eu4:F51",
+      "feature": "资料库事件与来源",
+      "format": "JPEG",
+      "width": 568,
+      "height": 744,
+      "bytes": 59316,
+      "sha256": "e871ceb46fbcbd180950daee5f2dd5940264384e77fe62818fcdca8059141a67",
+      "page": "https://shen-hhao.github.io/anbennar-timeline/research.html"
+    }
+  ]
+}
