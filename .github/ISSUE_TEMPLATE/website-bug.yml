@@ -1,0 +1,27 @@
+name: 网页或地图交互问题
+description: 报告显示、操作、加载或移动端问题。
+title: "[网页] "
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤和实际结果
+      description: 请附页面地址、年份、国家，以及操作前后的情况。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 浏览器、设备与版本
+      placeholder: "例如：Chrome，Windows，网页版本0.xx"
+  - type: textarea
+    id: media
+    attributes:
+      label: 截图或补充
+      description: 可粘贴公开截图。请遮去个人信息。

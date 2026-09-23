@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+config.local.json
+.feedback-cache/
+.pages-stage/
+artifacts/
+external_references/raw/
+research/*.sqlite
+research/*.sqlite-*

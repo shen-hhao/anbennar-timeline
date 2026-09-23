@@ -1,0 +1,32 @@
+name: 历史、归属或翻译纠错
+description: 提交线索即可，不需要懂代码；不确定的信息可以注明未知。
+title: "[纠错] "
+body:
+  - type: markdown
+    attributes:
+      value: 请不要贴密码、私人聊天或未获准分享的资料。史料存在争议也欢迎提交，推测请直接注明。
+  - type: input
+    id: location
+    attributes:
+      label: 年份、国家与位置
+      description: 写能确定的部分；省份 ID、TAG 不知道可留空。尽量附网页地址或截图。
+      placeholder: "例如：1650年，某国东北侧；省份ID未知"
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 现在看到的内容与疑问
+      description: 是否开启推测、宗主配色或特殊图层？你预期应如何表示？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 来源或线索
+      description: 网址、文件名、原文位置、作者、版本或消息时间；没有来源也可写“待找”。公开 Discord 消息请附消息链接，译文尽量附原文。
+  - type: textarea
+    id: uncertainty
+    attributes:
+      label: 可能的其他解释
+      description: 有无前后版本差异、城池与整省混淆、宗主与直接统治区别，或你不确定的部分？

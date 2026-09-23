@@ -1,0 +1,5 @@
+# Keep published snapshot bytes reproducible across operating systems.
+* -text
+*.png binary
+*.webp binary
+*.sqlite binary

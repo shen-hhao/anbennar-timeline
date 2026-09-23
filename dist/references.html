@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>参考材料目录 · 哈兰历史地图</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23202020'/%3E%3Cpath d='M8 8h16v16H8zM8 13h16M13 13v11' fill='none' stroke='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./research.css">
+  <link rel="stylesheet" href="./references.css">
+</head>
+<body>
+<header class="register-header"><a href="./" class="brand">哈兰历史地图 <small>ANBENNAR · 0.24</small></a><nav aria-label="网站导航"><a href="./">历史地图</a><a href="./research.html">资料库与进度</a><a href="./continuity.html">连续推演与依据</a><a href="./references.html" aria-current="page">参考材料</a></nav></header>
+<main>
+  <section class="register-intro"><p class="eyebrow">REFERENCE MATERIALS</p><h1>先收集材料，再逐项核对。</h1><p>汇集本地社群材料、公开开发日志和待追踪的来源入口，记录取得了什么、还缺什么，以及哪些内容仍待判断。</p></section>
+  <p class="reference-boundary">材料收集，不计入全期历史审校完成率。收录文档不代表其中全部内容已被采用，也不会自动变更地图。</p>
+  <p id="reference-loading" role="status">正在读取参考材料目录…</p>
+  <div id="reference-view" hidden>
+    <section id="reference-summary" class="reference-summary" aria-label="材料收集概览"></section>
+    <p id="reference-counting" class="counting-note"></p>
+    <section aria-labelledby="reference-list-heading">
+      <div class="section-heading"><h2 id="reference-list-heading">材料目录</h2><span id="reference-count" role="status" aria-live="polite"></span></div>
+      <form id="reference-filters" class="reference-filters" role="search">
+        <label class="reference-search">标题检索<input id="reference-search" type="search" placeholder="中文、English 或文件名" autocomplete="off"></label>
+        <label>地区<select id="reference-region"><option value="all">全部地区</option></select></label>
+        <label>来源<select id="reference-origin"><option value="all">全部来源</option><option value="local">社群提供原件</option><option value="online">网上材料</option><option value="mod">本地 MOD 原件</option></select></label>
+        <label>采集状态<select id="reference-status"><option value="all">全部采集状态</option></select></label>
+        <button id="reference-reset" type="reset">清除筛选</button>
+      </form>
+      <div id="reference-results" class="reference-results"></div>
+      <div class="pagination"><button id="reference-previous" type="button">← 上一页</button><span id="reference-page"></span><button id="reference-next" type="button">下一页 →</button></div>
+    </section>
+    <details class="methodology" open><summary>来源如何判断，下一步如何采用？</summary><p>官方已采用的信息优先于社区材料。官方开发日志仍需逐段区分历史背景、草案和可选路线。社区整理、译本和玩家剧情可以提供辅助线索，并需识别其中的个人推断。</p><p>同级来源优先核对较新的版本，同时保留旧版及改动线索。发表时间、抓取时间和设定所述年代分别记录，不能相互替代。</p><p>其余分歧结合出处、版本适用范围和相互印证情况进行合理性判断，记录采用理由；只有具体年代、关系或边界依据不足时保留未知。同一文档的译本、转帖和重复副本不算独立证据。</p><p>原始资料库和原件档案保存在维护者本地，本页展示来源目录，部分原文摘录保留在已采用记录中。归档来源定位以文字显示，并非附件下载地址；网上入口可能只有来源信息，或缺少图片、完整评论和修订记录。</p><div id="reference-policy"></div><p id="reference-updated"></p></details>
+  </div>
+</main>
+<footer>哈兰历史地图 · 来源可追溯，推测可辨识。</footer>
+<script type="module" src="./references.js"></script>
+</body>
+</html>

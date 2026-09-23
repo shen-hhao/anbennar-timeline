@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "note": "精选时点用于比较全局格局；完整事件与逐年回放独立保留。",
+  "bookmarks": [
+    {
+      "bookmarkId": "owp-snapshot-opening",
+      "year": 1444,
+      "label": "开局格局",
+      "title": "旧大陆的开局",
+      "description": "1444年11月11日开局。原住社群、未收录地区和未知归属分别保留。",
+      "relatedEventIds": [
+        "start-1444"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-revelation",
+      "year": 1518,
+      "label": "信仰变局",
+      "title": "旧信仰的危机",
+      "description": "1518年死讯揭露后的同期格局；各国改宗和边界变化各有时间。",
+      "relatedEventIds": [
+        "castellos-revelation"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-rahen-fall",
+      "year": 1562,
+      "label": "拉亨转折",
+      "title": "拉亨秩序的崩溃",
+      "description": "1562年贾达帝国与拉亨的同期格局；政体成立、城市占领与推演疆界分别判断。",
+      "relatedEventIds": [
+        "ca09-text-bwc26-jd-dhenijansar-occupation-1562",
+        "bwm26-jd-raj-capital-collapse-1562",
+        "bwm26-jd-jadd-empire-identity-1562"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-religious-order",
+      "year": 1638,
+      "label": "教会成立",
+      "title": "揭秘教会的时代",
+      "description": "1638年揭秘教会成立时的同期格局；教会成立不等于领土政权建国。",
+      "relatedEventIds": [
+        "ravelian-church-1638"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-imperial-succession",
+      "year": 1730,
+      "label": "继承战争",
+      "title": "卡米尔身后的帝国",
+      "description": "1730年继承战争开始时的同期格局；1735年的战争结果不提前置于本年。",
+      "relatedEventIds": [
+        "camiran-succession-1730"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-rending",
+      "year": 1783,
+      "label": "灵潮后期",
+      "title": "灵潮与东方秩序危机",
+      "description": "1783年阶段比较；灵潮及各地独立各有分期，1785年的灵域退却尚未发生。",
+      "relatedEventIds": [
+        "hlm26-ys-bimlau-restoration-1783",
+        "hlc26-lingyuk-formation-1751",
+        "hlc26-lingyuk-retreat-1785"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-blackpowder",
+      "year": 1810,
+      "label": "黑火药战争",
+      "title": "黑火药叛乱",
+      "description": "1810年战争开始时的同期格局；后续独立、割地和政体承接按各自阶段显示。",
+      "relatedEventIds": [
+        "blackpowder-1810",
+        "wc081-blackpowder-visual-succession-1810"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    },
+    {
+      "bookmarkId": "owp-snapshot-endpoint",
+      "year": 1820,
+      "label": "终点格局",
+      "title": "战后的旧大陆",
+      "description": "1820年1月1日官方政治状态的观察终点；省形对应有不确定性，不代表本年发生全部变更。",
+      "relatedEventIds": [
+        "start-1820"
+      ],
+      "snapshotRole": "global-comparison",
+      "dateIsHistoricalFact": false,
+      "globalEventClaim": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "halann-community-atlas",
+  "version": "0.25.0-community-preview.20260923",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check-public-site.mjs",
+    "test": "node --test tests/model.test.mjs tests/viewport.test.mjs tests/qualification-visibility.test.mjs"
+  }
+}

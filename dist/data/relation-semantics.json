@@ -1,0 +1,1085 @@
+{
+  "schemaVersion": 1,
+  "batchId": "old-world-review-wave2-20260923-control",
+  "scopeTags": [
+    "A74",
+    "B39",
+    "F99",
+    "I03",
+    "I62",
+    "J53",
+    "L08",
+    "L34",
+    "L55",
+    "R42",
+    "R74",
+    "V15",
+    "Y61",
+    "Y71",
+    "Y74",
+    "Y79",
+    "Y82",
+    "Z28",
+    "v3:A18",
+    "v3:A26",
+    "v3:A70",
+    "v3:D03",
+    "v3:D37",
+    "v3:E03",
+    "v3:E04",
+    "v3:F10",
+    "v3:L03",
+    "v3:L21",
+    "v3:L29",
+    "v3:L68",
+    "v3:R01",
+    "v3:R02",
+    "v3:R03",
+    "v3:R20",
+    "v3:Y14",
+    "v3:Y18",
+    "v3:Y21",
+    "v3:Y25",
+    "v3:Y27",
+    "v3:Y28",
+    "v3:Y29",
+    "v3:Y30",
+    "v3:Y31",
+    "v3:Y32",
+    "v3:Y33",
+    "v3:Y48"
+  ],
+  "groups": [
+    {
+      "groupId": "oww1-control-01",
+      "actor": "A74",
+      "historicSubjects": [
+        "A74"
+      ],
+      "endpointSubject": "v3:A70",
+      "provinceIds": [
+        451
+      ],
+      "decisionId": "oww1-control-01-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-02",
+      "actor": "B39",
+      "historicSubjects": [
+        "B39"
+      ],
+      "endpointSubject": "v3:A26",
+      "provinceIds": [
+        727,
+        728,
+        750,
+        751,
+        753,
+        756,
+        757,
+        758,
+        759,
+        760,
+        767
+      ],
+      "decisionId": "oww1-control-02-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-03",
+      "actor": "F99",
+      "historicSubjects": [
+        "F99"
+      ],
+      "endpointSubject": "v3:R01",
+      "provinceIds": [
+        4368,
+        4379,
+        4381,
+        4385,
+        4391,
+        4392,
+        4394,
+        4401,
+        4404,
+        4405,
+        4407,
+        4410,
+        4411,
+        4412,
+        4413,
+        4414,
+        4415,
+        4416,
+        4417,
+        4418,
+        4419,
+        4421,
+        4422,
+        4423,
+        4424,
+        4425,
+        4426,
+        4427,
+        4428,
+        4429,
+        4430,
+        4434,
+        4435,
+        4436,
+        4481
+      ],
+      "decisionId": "oww1-control-03-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-04",
+      "actor": "H80",
+      "historicSubjects": [
+        "v3:D37"
+      ],
+      "endpointSubject": "v3:D37",
+      "provinceIds": [
+        4044,
+        4045,
+        4046,
+        4054,
+        4096,
+        4552,
+        4553
+      ],
+      "decisionId": "oww1-control-04-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-05",
+      "actor": "I03",
+      "historicSubjects": [
+        "I03"
+      ],
+      "endpointSubject": "v3:D03",
+      "provinceIds": [
+        2998,
+        2999,
+        3000,
+        3001,
+        3002,
+        3003,
+        4020,
+        4130,
+        4148
+      ],
+      "decisionId": "oww1-control-05-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-06",
+      "actor": "J53",
+      "historicSubjects": [
+        "J53"
+      ],
+      "endpointSubject": "v3:E03",
+      "provinceIds": [
+        5062,
+        5063,
+        5064,
+        5065,
+        5067,
+        5068,
+        5069,
+        5070,
+        5071,
+        5109,
+        5110,
+        5111,
+        5112,
+        5114,
+        5115,
+        5117,
+        5118,
+        5119,
+        5120,
+        5121,
+        5122,
+        5123,
+        5124,
+        5125,
+        5126,
+        5127,
+        5128,
+        5129
+      ],
+      "decisionId": "oww1-control-06-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-07",
+      "actor": "L08",
+      "historicSubjects": [
+        "L08"
+      ],
+      "endpointSubject": "v3:L21",
+      "provinceIds": [
+        3207,
+        3208,
+        3209,
+        3210,
+        5677,
+        5678,
+        5679,
+        5694,
+        5695,
+        5697,
+        5698,
+        5699,
+        5700,
+        5702,
+        5703,
+        5717,
+        5773,
+        5835,
+        5836,
+        5837,
+        5838,
+        5871
+      ],
+      "decisionId": "oww1-control-07-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-08",
+      "actor": "L34",
+      "historicSubjects": [
+        "L34"
+      ],
+      "endpointSubject": "v3:L68",
+      "provinceIds": [
+        3236,
+        3238,
+        5819,
+        6597,
+        6600,
+        6605
+      ],
+      "decisionId": "oww1-control-08-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-09",
+      "actor": "L55",
+      "historicSubjects": [
+        "L55"
+      ],
+      "endpointSubject": "v3:L29",
+      "provinceIds": [
+        5439,
+        5523,
+        5524,
+        5525,
+        6654,
+        6656,
+        6657,
+        6659
+      ],
+      "decisionId": "oww1-control-09-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-10",
+      "actor": "R42",
+      "historicSubjects": [
+        "R42"
+      ],
+      "endpointSubject": "v3:R03",
+      "provinceIds": [
+        4431,
+        4432,
+        4433
+      ],
+      "decisionId": "oww1-control-10-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-11",
+      "actor": "R74",
+      "historicSubjects": [
+        "R74"
+      ],
+      "endpointSubject": "v3:R02",
+      "provinceIds": [
+        4373,
+        4437,
+        4438,
+        4439,
+        4440,
+        4441,
+        4442,
+        4443,
+        4444,
+        4446,
+        4447,
+        4548
+      ],
+      "decisionId": "oww1-control-11-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-12",
+      "actor": "V15",
+      "historicSubjects": [
+        "V15"
+      ],
+      "endpointSubject": "v3:Y48",
+      "provinceIds": [
+        5169,
+        5176,
+        5197,
+        5199,
+        5201,
+        5202,
+        5211
+      ],
+      "decisionId": "oww1-control-12-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-13",
+      "actor": "Y61",
+      "historicSubjects": [
+        "Y61"
+      ],
+      "endpointSubject": "v3:Y18",
+      "provinceIds": [
+        4798,
+        4800,
+        4801,
+        4802,
+        4946
+      ],
+      "decisionId": "oww1-control-13-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-14",
+      "actor": "Y71",
+      "historicSubjects": [
+        "Y71"
+      ],
+      "endpointSubject": "v3:Y21",
+      "provinceIds": [
+        4749,
+        4753,
+        4754,
+        4755,
+        4944,
+        4968
+      ],
+      "decisionId": "oww1-control-14-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-15",
+      "actor": "Y74",
+      "historicSubjects": [
+        "Y74"
+      ],
+      "endpointSubject": "v3:Y25",
+      "provinceIds": [
+        4712,
+        4713,
+        4767
+      ],
+      "decisionId": "oww1-control-15-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-16",
+      "actor": "Y79",
+      "historicSubjects": [
+        "Y79"
+      ],
+      "endpointSubject": "v3:Y29",
+      "provinceIds": [
+        4736,
+        4964
+      ],
+      "decisionId": "oww1-control-16-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-17",
+      "actor": "Y82",
+      "historicSubjects": [
+        "Y82"
+      ],
+      "endpointSubject": "v3:Y31",
+      "provinceIds": [
+        4956
+      ],
+      "decisionId": "oww1-control-17-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-18",
+      "actor": "Z28",
+      "historicSubjects": [
+        "Z28"
+      ],
+      "endpointSubject": "v3:A18",
+      "provinceIds": [
+        705,
+        723,
+        724
+      ],
+      "decisionId": "oww1-control-18-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-19",
+      "actor": "v3:E04",
+      "historicSubjects": [
+        "v3:E04"
+      ],
+      "endpointSubject": "v3:E04",
+      "provinceIds": [
+        5130,
+        5132,
+        5133,
+        5134,
+        5135,
+        5136,
+        5137,
+        5138,
+        5139,
+        5140,
+        5141,
+        5144,
+        5145,
+        5146,
+        5147,
+        5149,
+        5150,
+        5151,
+        5152,
+        5153,
+        5154
+      ],
+      "decisionId": "oww1-control-19-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-20",
+      "actor": "v3:F10",
+      "historicSubjects": [
+        "v3:F10"
+      ],
+      "endpointSubject": "v3:F10",
+      "provinceIds": [
+        657,
+        658
+      ],
+      "decisionId": "oww1-control-20-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-21",
+      "actor": "v3:L03",
+      "historicSubjects": [
+        "v3:L03"
+      ],
+      "endpointSubject": "v3:L03",
+      "provinceIds": [
+        382,
+        397,
+        399,
+        405,
+        453,
+        458
+      ],
+      "decisionId": "oww1-control-21-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-22",
+      "actor": "v3:R20",
+      "historicSubjects": [
+        "v3:R20"
+      ],
+      "endpointSubject": "v3:R20",
+      "provinceIds": [
+        4361,
+        4362,
+        4363,
+        4365,
+        4366,
+        4367,
+        4369,
+        4370,
+        4371,
+        4372,
+        4378
+      ],
+      "decisionId": "oww1-control-22-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-23",
+      "actor": "v3:Y14",
+      "historicSubjects": [
+        "v3:Y14"
+      ],
+      "endpointSubject": "v3:Y14",
+      "provinceIds": [
+        4562,
+        4582,
+        4583,
+        4589,
+        4590,
+        4593,
+        4594,
+        4595,
+        4598,
+        4603,
+        4604,
+        4607
+      ],
+      "decisionId": "oww1-control-23-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-24",
+      "actor": "v3:Y27",
+      "historicSubjects": [
+        "v3:Y27"
+      ],
+      "endpointSubject": "v3:Y27",
+      "provinceIds": [
+        4723,
+        4735
+      ],
+      "decisionId": "oww1-control-24-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-25",
+      "actor": "v3:Y28",
+      "historicSubjects": [
+        "v3:Y28"
+      ],
+      "endpointSubject": "v3:Y28",
+      "provinceIds": [
+        4733
+      ],
+      "decisionId": "oww1-control-25-close-default-change-task"
+    },
+    {
+      "groupId": "oww1-control-26",
+      "actor": "v3:Y30",
+      "historicSubjects": [
+        "v3:Y30"
+      ],
+      "endpointSubject": "v3:Y30",
+      "provinceIds": [
+        4730,
+        4772
+      ],
+      "decisionId": "oww1-control-26-close-default-change-task"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "oww2-admin-kulugiash",
+      "subject": "L08",
+      "overlord": "F66",
+      "type": "vassal",
+      "stepIds": [
+        "sw26-kh-kulugiash-medasi-1725"
+      ],
+      "publicText": "资料记载地方代管和宗主任命总督；权限分工与重设年代待考。发生年代仅能划定大致范围。",
+      "sourceRefs": [
+        {
+          "readId": "medasi",
+          "path": "docs/research/sarhal-west-20260920/kheterata/sources/medasi-compromise.wikitext",
+          "sha256": "88b25ee5ca36803e45a868b6ea90c84f83464131022fd3bdd27b803a265a76de",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full wikitext",
+          "locators": [
+            "L1-L24 (full file)"
+          ]
+        },
+        {
+          "readId": "kulugiash",
+          "path": "docs/research/sarhal-west-20260920/kheterata/sources/kulugiash.wikitext",
+          "sha256": "211f03f235404423ca0cda5eb0dd6ed1bf7f73f0a2e59592130126fca83bcced",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full wikitext",
+          "locators": [
+            "L1-L20 (full file)"
+          ]
+        }
+      ],
+      "dateIsHistoricalFact": false,
+      "administrativeCategoryNotInferredFromRawControl": true
+    },
+    {
+      "id": "oww2-admin-western-orachav",
+      "subject": "J53",
+      "overlord": "J33",
+      "type": "tributary",
+      "stepIds": [
+        "hlm26-pg-backcast-western-orachav",
+        "hlm26-pg-backcast-lakefoe-autonomy"
+      ],
+      "publicText": "资料记载名义归属与较高地方自治；具体施行年代、地区范围和朝贡形式仍属推演。",
+      "sourceRefs": [
+        {
+          "readId": "lake-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-lake-federation.json",
+          "sha256": "0c9652f41d251761c4999f25d25b6d2d78c656eaa2617937f8fb14a389cbdc3d",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1968.revisions[0] revision=29454; full wikitext"
+          ]
+        },
+        {
+          "readId": "orachav-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-orachav.json",
+          "sha256": "80af5fa41c57ee642370593dafd731efe5ef1e926deeac1e9fb1547a7f9dd1b6",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1065.revisions[0] revision=31014; full wikitext"
+          ]
+        },
+        {
+          "readId": "country-guide",
+          "path": "docs/research/haless-library-20260921/candidates/core/sources/1kax6aBdrNdsmpmIXaip00c1fxuBKsEYE4-MgU88xn5M/original.docx",
+          "sha256": "1b143899181dfeef99ef8c4dfdd7d04161188400e2a3f17c611531be051420a0",
+          "sourceTier": "development-guide-mutable-doc-snapshot",
+          "readScope": "Anarkhudi proposal; Shivusdoyen/Zabutodask country sections only",
+          "locators": [
+            "word/document.xml /document/body/p[1010] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1011] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1012] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1013] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1014] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1015] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1016] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1017] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1268] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1269] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1270] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1271] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1272] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1273] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1274] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1275] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1276] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1277] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1278] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1279] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1280] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1281] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1282] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1283] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1284] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1285] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1286] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1287] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1288] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1289] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1290] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1291] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1292] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1293] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1294] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1295] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1296] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1297] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1298] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1299] (direct body paragraphs, one based)"
+          ]
+        }
+      ],
+      "dateIsHistoricalFact": false,
+      "administrativeCategoryNotInferredFromRawControl": true
+    },
+    {
+      "id": "oww2-admin-eastern-orachav",
+      "subject": "v3:E04",
+      "overlord": "J33",
+      "type": "tributary",
+      "stepIds": [
+        "hlm26-pg-backcast-shivusdoyen"
+      ],
+      "publicText": "区域资料记载开拓者自行治理与较高自治；本地适用范围及关系起年仍属推演。",
+      "sourceRefs": [
+        {
+          "readId": "lake-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-lake-federation.json",
+          "sha256": "0c9652f41d251761c4999f25d25b6d2d78c656eaa2617937f8fb14a389cbdc3d",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1968.revisions[0] revision=29454; full wikitext"
+          ]
+        },
+        {
+          "readId": "orachav-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-orachav.json",
+          "sha256": "80af5fa41c57ee642370593dafd731efe5ef1e926deeac1e9fb1547a7f9dd1b6",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1065.revisions[0] revision=31014; full wikitext"
+          ]
+        },
+        {
+          "readId": "country-guide",
+          "path": "docs/research/haless-library-20260921/candidates/core/sources/1kax6aBdrNdsmpmIXaip00c1fxuBKsEYE4-MgU88xn5M/original.docx",
+          "sha256": "1b143899181dfeef99ef8c4dfdd7d04161188400e2a3f17c611531be051420a0",
+          "sourceTier": "development-guide-mutable-doc-snapshot",
+          "readScope": "Anarkhudi proposal; Shivusdoyen/Zabutodask country sections only",
+          "locators": [
+            "word/document.xml /document/body/p[1010] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1011] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1012] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1013] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1014] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1015] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1016] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1017] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1268] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1269] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1270] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1271] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1272] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1273] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1274] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1275] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1276] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1277] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1278] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1279] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1280] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1281] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1282] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1283] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1284] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1285] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1286] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1287] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1288] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1289] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1290] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1291] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1292] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1293] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1294] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1295] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1296] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1297] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1298] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1299] (direct body paragraphs, one based)"
+          ]
+        }
+      ],
+      "dateIsHistoricalFact": false,
+      "administrativeCategoryNotInferredFromRawControl": true
+    },
+    {
+      "id": "oww2-admin-lakefoe",
+      "subject": "I62",
+      "overlord": "J53",
+      "type": "vassal",
+      "stepIds": [
+        "hlm26-pg-backcast-lakefoe-autonomy"
+      ],
+      "publicText": "资料记载征服后保留地方自治；附庸法律类别、起止与具体疆域仍属推演。",
+      "sourceRefs": [
+        {
+          "readId": "ideas",
+          "path": "artifacts/sarhal-south-map-20260921/mod-before/localisation/anb_powers_and_ideas_l_english.yml",
+          "sha256": "19399ed2d17857ad7ac04d959cd1d501132dfd2d891a4d2b90df405ce1d3195b",
+          "sourceTier": "official-local-mod-snapshot",
+          "readScope": "matching ideas incl V15 economic/frontier context and I62 autonomy",
+          "locators": [
+            "L11236-L11238",
+            "L11237-L11239",
+            "L11238-L11240",
+            "L11239-L11241",
+            "L11240-L11242",
+            "L11241-L11243",
+            "L11242-L11244",
+            "L11243-L11245",
+            "L11244-L11246",
+            "L11245-L11247",
+            "L11246-L11248",
+            "L11247-L11249",
+            "L11248-L11250",
+            "L11249-L11251",
+            "L11250-L11252",
+            "L11251-L11253",
+            "L11252-L11254",
+            "L18740-L18742",
+            "L19335-L19337",
+            "L19337-L19339",
+            "L19343-L19345",
+            "L22186-L22188"
+          ]
+        }
+      ],
+      "dateIsHistoricalFact": false,
+      "administrativeCategoryNotInferredFromRawControl": true
+    },
+    {
+      "id": "oww2-admin-nahana",
+      "subject": "F99",
+      "overlord": "F51",
+      "type": "personal_union",
+      "stepIds": [
+        "bwm26-late-nahana-nominal-reunion-1784"
+      ],
+      "publicText": "资料记载名义重联；共同君主与权限分配尚未明确。名义重联暂列于1784年，另有1750年代异文。",
+      "sourceRefs": [
+        {
+          "readId": "rakhadesh",
+          "path": "external_references/online/bulwar-first-pass-20260920/wiki/rakhadesh.wikitext",
+          "sha256": "21e8661977824890c17548b77b04171d697ea15e2b3fdf9f36b91e8d6e9dfaf5",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full wikitext incl 1784 branch",
+          "locators": [
+            "L1-L48 (full file)"
+          ]
+        },
+        {
+          "readId": "bulwar-timeline",
+          "path": "external_references/online/bulwar-first-pass-20260920/originals/bulwar-timeline-current.docx",
+          "sha256": "d404416fdf6f432a17fdad63da4432e028e4ee6d3b549f3e6e7795b1b679ec74",
+          "sourceTier": "developer-linked-working-timeline-snapshot",
+          "readScope": "split and nominal reunion paragraphs; other contents not counted read",
+          "locators": [
+            "word/document.xml /document/body/p[428] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[429] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[430] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[431] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[432] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[433] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[434] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[435] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[436] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[437] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[438] (direct body paragraphs, one based)"
+          ]
+        }
+      ],
+      "dateIsHistoricalFact": false,
+      "administrativeCategoryNotInferredFromRawControl": true
+    }
+  ],
+  "endpointContexts": [
+    {
+      "id": "oww2-admin-kulugiash-endpoint-context",
+      "subject": "v3:L21",
+      "overlord": "v3:L01",
+      "type": "vassal",
+      "publicText": "相关历史叙述：资料记载地方代管和宗主任命总督；权限分工与重设年代待考。发生年代仅能划定大致范围。 此叙述不能单独确定1820年的内政权限。",
+      "sourceRefs": [
+        {
+          "readId": "medasi",
+          "path": "docs/research/sarhal-west-20260920/kheterata/sources/medasi-compromise.wikitext",
+          "sha256": "88b25ee5ca36803e45a868b6ea90c84f83464131022fd3bdd27b803a265a76de",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full wikitext",
+          "locators": [
+            "L1-L24 (full file)"
+          ]
+        },
+        {
+          "readId": "kulugiash",
+          "path": "docs/research/sarhal-west-20260920/kheterata/sources/kulugiash.wikitext",
+          "sha256": "211f03f235404423ca0cda5eb0dd6ed1bf7f73f0a2e59592130126fca83bcced",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full wikitext",
+          "locators": [
+            "L1-L20 (full file)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oww2-admin-western-orachav-endpoint-context",
+      "subject": "v3:E03",
+      "overlord": "v3:E01",
+      "type": "tributary",
+      "publicText": "相关历史叙述：资料记载名义归属与较高地方自治；具体施行年代、地区范围和朝贡形式仍属推演。 此叙述不能单独确定1820年的内政权限。",
+      "sourceRefs": [
+        {
+          "readId": "lake-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-lake-federation.json",
+          "sha256": "0c9652f41d251761c4999f25d25b6d2d78c656eaa2617937f8fb14a389cbdc3d",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1968.revisions[0] revision=29454; full wikitext"
+          ]
+        },
+        {
+          "readId": "orachav-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-orachav.json",
+          "sha256": "80af5fa41c57ee642370593dafd731efe5ef1e926deeac1e9fb1547a7f9dd1b6",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1065.revisions[0] revision=31014; full wikitext"
+          ]
+        },
+        {
+          "readId": "country-guide",
+          "path": "docs/research/haless-library-20260921/candidates/core/sources/1kax6aBdrNdsmpmIXaip00c1fxuBKsEYE4-MgU88xn5M/original.docx",
+          "sha256": "1b143899181dfeef99ef8c4dfdd7d04161188400e2a3f17c611531be051420a0",
+          "sourceTier": "development-guide-mutable-doc-snapshot",
+          "readScope": "Anarkhudi proposal; Shivusdoyen/Zabutodask country sections only",
+          "locators": [
+            "word/document.xml /document/body/p[1010] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1011] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1012] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1013] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1014] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1015] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1016] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1017] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1268] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1269] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1270] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1271] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1272] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1273] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1274] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1275] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1276] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1277] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1278] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1279] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1280] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1281] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1282] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1283] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1284] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1285] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1286] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1287] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1288] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1289] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1290] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1291] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1292] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1293] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1294] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1295] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1296] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1297] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1298] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1299] (direct body paragraphs, one based)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oww2-admin-eastern-orachav-endpoint-context",
+      "subject": "v3:E04",
+      "overlord": "v3:E01",
+      "type": "tributary",
+      "publicText": "相关历史叙述：区域资料记载开拓者自行治理与较高自治；本地适用范围及关系起年仍属推演。 此叙述不能单独确定1820年的内政权限。",
+      "sourceRefs": [
+        {
+          "readId": "lake-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-lake-federation.json",
+          "sha256": "0c9652f41d251761c4999f25d25b6d2d78c656eaa2617937f8fb14a389cbdc3d",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1968.revisions[0] revision=29454; full wikitext"
+          ]
+        },
+        {
+          "readId": "orachav-wiki",
+          "path": "docs/research/haless-library-20260921/candidates/plains-gozengun/sources/wiki-orachav.json",
+          "sha256": "80af5fa41c57ee642370593dafd731efe5ef1e926deeac1e9fb1547a7f9dd1b6",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full stored revision wikitext",
+          "locators": [
+            "query.pages.1065.revisions[0] revision=31014; full wikitext"
+          ]
+        },
+        {
+          "readId": "country-guide",
+          "path": "docs/research/haless-library-20260921/candidates/core/sources/1kax6aBdrNdsmpmIXaip00c1fxuBKsEYE4-MgU88xn5M/original.docx",
+          "sha256": "1b143899181dfeef99ef8c4dfdd7d04161188400e2a3f17c611531be051420a0",
+          "sourceTier": "development-guide-mutable-doc-snapshot",
+          "readScope": "Anarkhudi proposal; Shivusdoyen/Zabutodask country sections only",
+          "locators": [
+            "word/document.xml /document/body/p[1010] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1011] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1012] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1013] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1014] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1015] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1016] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1017] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1268] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1269] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1270] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1271] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1272] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1273] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1274] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1275] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1276] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1277] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1278] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1279] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1280] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1281] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1282] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1283] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1284] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1285] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1286] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1287] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1288] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1289] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1290] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1291] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1292] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1293] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1294] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1295] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1296] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1297] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1298] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[1299] (direct body paragraphs, one based)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oww2-admin-nahana-endpoint-context",
+      "subject": "v3:R01",
+      "overlord": "v3:F01",
+      "type": "personal_union",
+      "publicText": "相关历史叙述：资料记载名义重联；共同君主与权限分配尚未明确。名义重联暂列于1784年，另有1750年代异文。 此叙述不能单独确定1820年的内政权限。",
+      "sourceRefs": [
+        {
+          "readId": "rakhadesh",
+          "path": "external_references/online/bulwar-first-pass-20260920/wiki/rakhadesh.wikitext",
+          "sha256": "21e8661977824890c17548b77b04171d697ea15e2b3fdf9f36b91e8d6e9dfaf5",
+          "sourceTier": "community-wiki-fixed-revision",
+          "readScope": "full wikitext incl 1784 branch",
+          "locators": [
+            "L1-L48 (full file)"
+          ]
+        },
+        {
+          "readId": "bulwar-timeline",
+          "path": "external_references/online/bulwar-first-pass-20260920/originals/bulwar-timeline-current.docx",
+          "sha256": "d404416fdf6f432a17fdad63da4432e028e4ee6d3b549f3e6e7795b1b679ec74",
+          "sourceTier": "developer-linked-working-timeline-snapshot",
+          "readScope": "split and nominal reunion paragraphs; other contents not counted read",
+          "locators": [
+            "word/document.xml /document/body/p[428] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[429] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[430] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[431] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[432] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[433] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[434] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[435] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[436] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[437] (direct body paragraphs, one based)",
+            "word/document.xml /document/body/p[438] (direct body paragraphs, one based)"
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceLayerPolicy": "Raw type/control, renderer defaults, adopted scenarios and source descriptions remain separate. No administrative transition or exact date is established by this sidecar."
+}

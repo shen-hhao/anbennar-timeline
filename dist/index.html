@@ -1,0 +1,275 @@
+<!doctype html>
+
+<html lang="zh-CN">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="从官方地图出发，浏览安本纳尔世界的政权与历史。1444—1820 年哈兰历史地图。">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <title>哈兰历史地图 · Anbennar</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23202020'/%3E%3Cpath d='M7 9l6-2 6 3 6-2v16l-6 2-6-3-6 2V9zm6-2v16m6-13v16' fill='none' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./prerelease-ui.css">
+
+  <style id="relation-administration-responsive">
+    @media(max-width:760px){.detail-table dt:has(+ .relation-administration){grid-column:1}.detail-table dd.relation-administration{grid-column:2 / -1}}
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <a class="brand" href="./" aria-label="哈兰历史地图首页"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="m4 6 7-2 7 3 6-2v18l-6 2-7-3-7 2V6Zm7-2v18m7-15v18"/></svg><span>哈兰历史地图<small>ANBENNAR · 社区预览 0.25</small></span></a>
+
+    <div class="search-wrap">
+
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+
+      <input id="country-search" type="search" placeholder="查找国家 · 中文 / English" aria-label="查找国家" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results" autocomplete="off" disabled>
+
+      <div id="search-results" role="listbox" class="search-results" hidden></div>
+
+    </div>
+
+    <a class="research-link" href="./research.html">资料库与进度</a>
+
+    <a class="research-link" href="./continuity.html">连续推演与依据</a>
+
+    <button id="sources-button" class="quiet-button">资料与说明 <span aria-hidden="true">↗</span></button>
+
+  </header>
+
+
+
+  <main class="workspace">
+
+    <section class="map-column" aria-label="历史地图">
+
+      <div class="map-toolbar">
+
+        <div class="view-heading"><span class="map-icon" aria-hidden="true">◫</span><span>政治版图</span></div>
+
+        <div class="segmented" role="group" aria-label="地图配色">
+
+          <button id="original-mode" aria-pressed="true">国家配色</button>
+
+          <button id="subject-mode" aria-pressed="false" disabled>宗主关系</button>
+
+        </div>
+
+        <label class="evidence-control"><span>资料</span><select id="evidence-mode" aria-label="资料显示模式"><option value="reconstructed">含推测延拓</option><option value="attested">仅史料节点重建</option><option value="confirmed">仅开局确证</option></select></label>
+
+      </div>
+
+
+
+      <div id="map-stage" class="map-stage">
+
+        <canvas id="map" tabindex="0" role="img" aria-label="哈兰政治地图，左右可循环拖动；缩小至完整一圈地图适应视窗即停止：窄视窗以左右边界为准，宽视窗以南北边界为准。滚轮缩放，点击国家或历史地点。亦可用国家搜索或事件列表选择。方向键平移，加减键缩放，Home 键查看完整地图。"></canvas>
+
+        <div id="world-frame" class="world-frame" aria-hidden="true" hidden></div>
+
+        <div class="map-caption"><span id="map-date-label">1444.11.11</span><span id="map-status" class="status-label">正在读取地图</span></div>
+
+        <div id="imperial-summary" class="imperial-summary" hidden aria-live="polite"></div>
+
+        <details class="map-layers"><summary>图层与依据</summary><div>
+
+          <label class="quality-control" for="render-quality">显示精度<select id="render-quality" aria-describedby="render-quality-note"><option value="1">标准 · 1×</option><option value="2">精细 · 2×</option><option value="3" selected>超清 · 3×</option></select></label>
+
+          <p id="render-quality-note" class="quality-note" aria-live="polite">提高线条与纹理清晰度，省份轮廓不变。</p>
+
+          <label class="quality-control" for="border-weight">边界线宽<select id="border-weight"><option value="1">细 · 1×</option><option value="2">中 · 2×</option><option value="3" selected>清晰 · 3×</option></select></label>
+
+          <label><input type="checkbox" id="layer-provinces"><i class="boundary-sample province"></i>省份边界 · 自适应色</label>
+
+          <label class="quality-control" for="province-border-weight">省界线宽<select id="province-border-weight"><option value="1" selected>细 · 1×</option><option value="2">中 · 2×</option><option value="3">清晰 · 3×</option></select></label>
+
+          <label title="帝国实控采用统一填色；境外宣称保留国家或宗主底色，只叠加随地图缩放的横短线"><input type="checkbox" id="layer-imperial"><i class="imperial-swatch members"></i>安本纳尔帝国疆域</label>
+
+          <div id="imperial-details" class="imperial-details" hidden></div>
+
+          <details class="boundary-key"><summary>边界与地表图例</summary><div>
+
+            <span><i class="boundary-sample political"></i>国界 · 深色实线</span>
+
+            <span><i class="boundary-sample province"></i>国内省界 · 随底色调整，可独立加粗</span>
+
+            <span><i class="boundary-sample shore"></i>海岸／湖岸／宽河岸 · 蓝灰实线</span>
+
+            <span><i class="boundary-sample frontier"></i>未指定国家控制的边缘 · 棕色短虚线</span>
+
+            <span><i class="boundary-sample wasteland"></i>荒地边缘 · 灰绿点划线</span>
+
+            <span><i class="boundary-sample uncertain"></i>未收录／待核边缘 · 灰紫长虚线</span>
+
+            <span><i class="subject-border-sample double"></i>联统／帝国卫邦／傀儡 · 内侧实线</span>
+
+            <span><i class="subject-border-sample dashed"></i>朝贡关系 · 内侧虚线</span>
+
+            <span><i class="subject-border-sample dotted"></i>特殊附属 · 内侧点线</span>
+
+            <p>宗主模式下全部附属与宗主同色；正常国界始终保留，特殊标线只绘在附属国内侧，不改变宗主或邻国的边框。线型区分地图中的关系类别，不单独证明内政权限；各国的具体行政情况见国家面板。所有边界的线宽、线距、虚线及衬边均随地图同比缩放，配色模式不改变线宽。省界按实际底色映射对比色，国界与省界可分别调整粗细。</p>
+
+          </div></details>
+
+          <div id="endpoint-options" hidden><label><input type="checkbox" id="endpoint-remote">远海最近国家 · 极弱推测</label><p>19处远海地块未找到有效Vic3陆地对应，默认显示待核；勾选后按最近国家补色。</p><a href="./correspondence.html">查看全图省份对应、票数与来源 →</a></div>
+
+          <label><input type="checkbox" id="layer-hypothesis" checked><span class="legend-swatch hypothesis-dots"></span>推测归属 · 三角格点</label>
+
+          <label><input type="checkbox" id="layer-projection"><span class="legend-swatch projection-lines"></span>史料边界投影 · 细斜纹</label>
+
+          <label><input type="checkbox" id="layer-continued"><span class="legend-swatch continued-dots"></span>空档延续旧界 · 空心格点</label>
+
+          <label><input type="checkbox" id="layer-qualification" aria-describedby="qualification-layer-help"><span class="legend-swatch qualification-stripes"></span>分治与待核 · 彩色条纹</label>
+          <p id="qualification-layer-help">默认关闭；开启后标出分治、地方势力或范围待核的省份。此开关只改变纹理，具体归属与限定说明始终保留。</p>
+
+          <label><input type="checkbox" id="layer-changes" checked>本年版图变化</label>
+
+          <div class="change-pattern-key"><span class="legend-swatch attested-change"></span>单斜线 · 史料节点变化</div>
+
+          <div class="change-pattern-key"><span class="legend-swatch hypothesis-change"></span>双斜线 · 推测扩张／变化</div>
+
+          <p>纹理按每处实际底色计算补色与明暗差异。黑白图例只表示形状，地图上的颜色随国家和图层变化。</p>
+
+          <p>推测变化当年用双斜线，后续未变用实心点阵；史料支持的变化用单斜线。明确定位归属可消除对应推测点阵。普通扩张、独立与宗主关系变化也按此规则显示。</p><p id="layer-counts"></p>
+
+          <p>中间年份与 1820 的史料边界仍是投影重建，未加纹理也不等于确证。</p>
+
+        </div></details>
+
+        <div id="map-notice" class="map-notice" hidden><strong id="notice-title"></strong><p id="notice-text"></p><button id="back-to-baseline" class="text-button">查看 1444 开局 <span aria-hidden="true">→</span></button></div>
+
+        <div id="loading" class="loading" role="status"><span class="spinner" aria-hidden="true"></span><span id="loading-text">正在读取官方省份地图…</span><button id="reload-button" hidden>重新加载</button></div>
+
+        <div id="map-tooltip" class="map-tooltip" hidden></div>
+
+        <div class="map-controls" aria-label="地图视角控制">
+
+          <button id="map-fullscreen" aria-label="网页全屏浏览地图" aria-pressed="false" title="网页全屏浏览"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 2H2v5m11-5h5v5M2 13v5h5m11-5v5h-5M6 6l-4-4m12 4 4-4M6 14l-4 4m12-4 4 4"/></svg></button><span></span>
+
+          <button id="zoom-in" aria-label="放大地图" title="放大 (+)">+</button><button id="zoom-out" aria-label="缩小地图" title="缩小至完整地图适应视窗 (−)">−</button><span></span><button id="fit-map" aria-label="查看完整地图" title="查看完整地图 (Home)"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></button>
+
+        </div>
+
+        <div id="map-fullscreen-controls" class="map-fullscreen-controls" aria-label="全屏浏览控制" hidden><button id="map-native-fullscreen">电脑全屏</button><button id="map-fullscreen-exit" title="退出全屏浏览 (Esc)">退出全屏 <kbd>Esc</kbd></button><span id="map-fullscreen-status" class="fullscreen-status" role="status"></span></div>
+
+        <div class="map-bottom"><div class="map-legends"><div id="map-legend" class="map-legend"><span class="legend-swatch empty"></span>
+      未指定国家与荒地不着国家色<span class="legend-divider"></span>隐厦暂未收录</div><p id="political-qualification-legend" class="political-qualification-legend" hidden></p><div id="imperial-map-legend" class="surface-legend" aria-label="帝国区域图例" hidden></div><div class="surface-legend" aria-label="地理底色图例"><span><i class="surface-swatch water"></i>水体</span><span><i class="surface-swatch unowned"></i>未指定国家控制</span><span><i class="surface-swatch wasteland"></i>荒地</span><span><i class="surface-swatch unknown"></i>未收录／待核</span></div></div><span id="zoom-label" class="zoom-label">全图</span></div>
+
+      </div>
+
+      <div class="map-footnote"><span id="map-source-label">底图 · EU4 Anbennar</span><a href="./about.html">项目与反馈</a><span id="hover-location">左右循环拖动 · 滚轮缩放 · 点击国家</span></div>
+
+    </section>
+
+
+
+    <aside class="sidebar" aria-label="国家与事件详情">
+
+      <div class="sidebar-tabs" role="tablist" aria-label="详情类别"><button id="country-tab" role="tab" aria-selected="true" aria-controls="country-panel">国家</button><button id="events-tab" role="tab" aria-selected="false" aria-controls="events-panel">事件 <span id="event-count">1</span></button><button id="chronicle-tab" role="tab" aria-selected="false" aria-controls="chronicle-panel" tabindex="-1">国家沿革</button></div>
+
+      <div class="sidebar-scroll">
+
+        <section id="country-panel" role="tabpanel" aria-labelledby="country-tab"><div class="empty-detail"><p class="eyebrow">开局档案</p><h1>1444<span>年</span></h1><p>选择地图上的国家，查看名称、旗帜与附属关系。</p><div id="atlas-stats" class="atlas-stats"></div><div class="section-rule"></div><h2>从这里开始</h2><div id="featured-countries" class="featured-countries"></div><p class="subtle-note">地图归属取自 1444 年 11 月 11 日开局文件。后续年代将逐步补充。</p></div></section>
+
+        <section id="events-panel" role="tabpanel" aria-labelledby="events-tab" hidden><div class="events-heading"><p class="eyebrow" id="events-year">1444 年</p><h2>这一年的记录</h2></div><div id="event-list"></div></section>
+
+        <section id="chronicle-panel" role="tabpanel" aria-labelledby="chronicle-tab" hidden><div id="dossier-filters" class="dossier-filters"><label for="dossier-search">按国家梳理历史</label><input id="dossier-search" type="search" placeholder="名称 / English / TAG" autocomplete="off"><select id="dossier-group" aria-label="沿革档案范围"><option value="all">全部国家</option><option value="reviewed">已作专题梳理</option><option value="imperial">开局持有帝国省份</option></select></div><div id="dossier-content"></div></section>
+
+      </div>
+
+      <div class="sidebar-footer"><span class="small-square" aria-hidden="true"></span><span id="coverage-label">1444 开局已收录</span></div>
+
+    </aside>
+
+  </main>
+
+
+
+  <footer class="timeline" aria-label="年份时间轴">
+
+    <output id="fullscreen-year" class="fullscreen-year" for="year-slider" aria-label="当前年份">1444 年</output>
+
+    <div id="era-track" class="era-track" aria-label="四时代参考分期"></div>
+
+    <nav class="bookmark-nav" aria-label="精选时点"><span>精选时点</span><div id="bookmark-buttons" class="bookmark-buttons"></div><select id="bookmark-select" class="bookmark-select" aria-label="选择精选时点"></select></nav>
+    <p id="bookmark-description" class="bookmark-description"></p>
+
+    <div class="timeline-top"><div class="year-entry"><button id="previous-year" aria-label="前一年">‹</button><label for="year-input" class="sr-only">年份</label><input id="year-input" type="number" min="1444" max="1820" step="1" value="1444" inputmode="numeric"><span class="year-suffix">年</span><button id="next-year" aria-label="后一年">›</button></div><div id="year-summary" class="year-summary">欧陆风云 IV 开局</div><div class="event-navigation"><button id="previous-event" aria-label="上一个记录年份" title="上一个记录年份">← 记录</button><button id="next-event" aria-label="下一个记录年份" title="下一个记录年份">记录 →</button></div></div>
+
+    <div class="timeline-track"><div class="history-interval" title="1810—1820：四处归属变化的发生区间，具体年份待考" aria-hidden="true"></div><input id="year-slider" type="range" min="1444" max="1820" value="1444" step="1" aria-label="选择年份"><div class="timeline-ticks"><span>1444</span><span>1500</span><span>1600</span><span>1700</span><span>1800</span><span>1820</span></div></div>
+
+    <div class="timeline-note"><span><i class="timeline-key known"></i>开局快照 <i class="timeline-key event"></i>逐年回放 <i class="timeline-key interval"></i>发生区间</span><span id="timeline-coverage"><span id="era-label"></span> · 1444—1820</span></div>
+
+  </footer>
+
+
+
+  <dialog id="sources-dialog" aria-labelledby="sources-title">
+
+    <div class="dialog-heading"><h2 id="sources-title">资料与说明</h2><button id="close-sources" aria-label="关闭资料说明">×</button></div>
+
+    <div class="dialog-body">
+
+      <p><strong>非官方社区预览版 · 2026-09-23</strong>。历史方案保留来源与不确定性，欢迎共同校订。<a href="./about.html">项目说明、素材署名与反馈入口 →</a></p>
+
+      <p>地图左右循环，按实际地图视窗与底图的宽高比确定最小缩放：相对窄的视窗以左右完整一圈为准，相对宽的视窗以南北完整可见为准。地图居中，多余空间留白；画面最多显示一圈经度。普通页面、全屏与横竖屏切换时自动适应，左右拖动仍可环绕。默认 3 倍画布采样，边界使用独立描边，默认三倍线宽；原始省份像素与点击归属保持一致，不额外生成地理细节。1444 使用 EU4 开局资料；中间年代提供坎诺、布勒瓦尔、阳洲、东洲与蛇脊的阶段重建；1820 将 Vic3 官方开局归属映射到相同 EU4 省形，整条时间线不更换底图。</p>
+
+      <h3>版图与推定</h3>
+
+      <p>有记载的节点更新归属，节点之间延续最近状态。所有中间年代的面范围均属重建。“含推测延拓”显示根据任务文本、宣称和首尾资料编排的阶段方案；“仅史料节点重建”隐藏这些推测，仍沿用史料节点之间的旧边界；“仅开局确证”保留 EU4 开局原始归属，隐藏 1820 跨图推定边界。1820 的强地名对应归入史料投影，较弱地理分配归入推测；1820 只是结果观察时点，不代表这些领土全在这一年易手。龙岸完整复兴过程为推测，关闭推测后，自 1599 观察点起仅保留利尔罗伊的间接控制线索。</p>
+
+      <p>实心点阵表示持续的推测归属；所有实际归属或统治关系变化，在所选变化年用斜线替代点阵：史料单斜线，推测双斜线。下一年根据仍有效的证据恢复常驻纹理；明确归属定位可消除对应点阵，但不凭此虚构扩张。单纯改名不加变化线。纹理颜色随底色调整，图例用黑白表示形状。年份不明确时说明所采用的观察节点。</p>
+
+      <p>纹理已从原始位图拆分，以原点距的三分之一绘制圆点，随缩放调整可读密度，并按官方轮廓精确裁剪。三角格点为圆点的排布方式。原图未记载的省界细节不会由插值虚构，极限放大仍可见源图的阶梯轮廓。</p>
+
+      <p>边界默认三倍线宽；国界以真实国家身份绘制，宗主同色不会合并边界。水岸为蓝灰实线，未指定国家控制的土地边缘为棕色短虚线，荒地边缘为灰绿点划线，资料空白边缘为灰紫长虚线。浅蓝、米白、灰绿、浅灰分别表示水体、未指定国家控制的土地、荒地及未收录／待核区域。水岸包含原省份图中的宽河；独立河流图中的细河尚未叠加。</p>
+
+      <p>国家原色、1444 旗帜与中文名称来自本地 MOD 和汉化。1820 归属与附属关系来自固定版本的 Vic3 官方仓库；旗帜优先使用已核对的同国 EU4 标识，并保留必要的革命变体和 Vic3 纹章。每国标注对应依据，无法核对者显示待核。少量中文名称为暂译。隐厦暂不重建。</p>
+
+      <p id="source-stats"></p>
+
+      <a href="https://gitlab.com/anbennar/anbennar-eu4-dev" target="_blank" rel="noreferrer">EU4 官方仓库 ↗</a><br>
+
+      <a href="https://gitlab.com/anbennar/anbennar-vicky3-dev/-/tree/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2" target="_blank" rel="noreferrer">Vic3 固定资料版本 ↗</a>
+
+      <h3>历史记录的依据</h3>
+
+      <p>各地区节点由设定年表、官方开发日志、固定版本文献及 MOD 背景文本交叉整理。氏族地按国家控制显示，冒险团实际殖民接管后才更改归属。任务宣称与可选任务结果只用来约束明确标注的推测方案。节点选年与精确省界可能是网站的工作假设，不能当作 MOD 正史。国家沿革列出逐国依据与尚未解决的问题；标为“开局档案”的国家尚未完成专题研究。</p>
+
+      <a href="https://anbennar.fandom.com/wiki/Modern_Lorentish_Timeline" target="_blank" rel="noreferrer">Modern Lorentish Timeline ↗</a><br>
+
+      <a href="https://www.reddit.com/r/Anbennar/comments/1shx1ne/vic_3_dev_diary_6_cannor/" target="_blank" rel="noreferrer">Vic3 开发日志 #6：坎诺 ↗</a>
+
+      <p class="subtle-note">史料中的自治、附属与主权转移分别处理。1525 德兰诸侯领是重建集合，不是新设的正史国家。1635 是小人国独立局势的推定观察节点，不是已确认的独立年份。1820 源归属冲突或无法可靠对应的 EU4 地块保持待核，不用开局旧所有者补空。</p>
+
+      <h3>四时代</h3>
+
+      <p>怪物时代、揭秘时代、巫师王时代、奇械时代采用约 1444／1530／1620／1710 的参考分期。后续三项参考 MOD 的 start 字段；实际游戏换代由相应条件及 120 个月进度决定，不能解释为固定正史分界。时代名称采用当前 MOD 与汉化。</p>
+
+      <h3>附属配色</h3>
+
+      <p>国家模式将 MOD 国色转换为保留色相的浅色。宗主模式中，全部附属与最终宗主同色，特殊附属用并排边界区分；国家身份不变。帝国模式用安本纳尔白色表示成员实控，达梅里亚青色表示皇帝本国。</p>
+
+    </div>
+
+  </dialog>
+
+  <div id="announcement" role="status" aria-live="polite" class="sr-only"></div>
+
+  <script type="module" src="./app.js"></script>
+
+</body>
+
+</html>
+
