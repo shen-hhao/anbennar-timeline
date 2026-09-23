@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "coverage": "黑火药战争的四处地点锚点；不代表 Cannor 完整疆域",
+  "geometryNote": "地名对应仅用于事件列表的定位。割让范围尚未核定，不给同名省份自动添加变化斜线。",
+  "timeNote": "1810—1820 是根据革命开始及 Vic3 开局局势限定的发生区间，不表示持续交战至 1820，也不表示四地在同一年易手。",
+  "sources": {
+    "diary6": {
+      "title": "Vic3 开发日志 #6：Cannor",
+      "url": "https://www.reddit.com/r/Anbennar/comments/1shx1ne/vic_3_dev_diary_6_cannor/"
+    },
+    "states": {
+      "title": "Vic3 1820 开局：省份归属",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/states/anb_states.txt"
+    },
+    "diplomacy": {
+      "title": "Vic3 1820 开局：附属关系",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/diplomacy/anb_subject_relationships.txt"
+    },
+    "definitions": {
+      "title": "Vic3 国家定义与原色",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/country_definitions/anb_countries.txt"
+    },
+    "regions": {
+      "title": "Vic3 Cannor 州与城市定义",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/map_data/state_regions/anb_cannor.txt"
+    }
+  },
+  "actors": {
+    "v3:A01": {
+      "tag": "v3:A01",
+      "name": "Anbennar",
+      "nameZh": "安本纳尔",
+      "color": [
+        211,
+        220,
+        240
+      ]
+    },
+    "v3:A02": {
+      "tag": "v3:A02",
+      "name": "Vivin Empire",
+      "nameZh": "维文帝国",
+      "color": [
+        0,
+        18,
+        145
+      ]
+    },
+    "v3:A04": {
+      "tag": "v3:A04",
+      "name": "Northern League",
+      "nameZh": "北方联盟",
+      "color": [
+        48,
+        51,
+        108
+      ]
+    },
+    "v3:A05": {
+      "tag": "v3:A05",
+      "name": "Bisan",
+      "nameZh": "比珊",
+      "color": [
+        42,
+        150,
+        23
+      ]
+    },
+    "v3:A09": {
+      "tag": "v3:A09",
+      "name": "Busilar",
+      "nameZh": "布西拉尔",
+      "color": [
+        211,
+        85,
+        4
+      ]
+    },
+    "v3:A14": {
+      "tag": "v3:A14",
+      "name": "Small Country",
+      "nameZh": "小人国",
+      "color": [
+        197,
+        138,
+        99
+      ]
+    },
+    "v3:A19": {
+      "tag": "v3:A19",
+      "name": "Vertesk",
+      "nameZh": "维特斯克",
+      "color": [
+        57,
+        81,
+        87
+      ]
+    }
+  },
+  "relations": {
+    "v3:A05": {
+      "subject": "v3:A05",
+      "overlord": "v3:A02",
+      "type": "puppet",
+      "typeLabel": "傀儡国",
+      "control": "direct",
+      "source": "diplomacy",
+      "lines": "21–25"
+    },
+    "v3:A19": {
+      "subject": "v3:A19",
+      "overlord": "v3:A04",
+      "type": "puppet",
+      "typeLabel": "傀儡国",
+      "control": "direct",
+      "source": "diplomacy",
+      "lines": "79–87"
+    }
+  },
+  "changes": [
+    {
+      "id": "beepeck-transfer",
+      "name": "Beepeck",
+      "nameZh": "比佩克",
+      "anchorProvinceId": 151,
+      "earliestYear": 1810,
+      "observedByYear": 1820,
+      "exactYear": null,
+      "fromActor": "v3:A01",
+      "sphereActor": "v3:A14",
+      "directActor": "v3:A14",
+      "description": "黑火药战争中，比佩克脱离安本纳尔，转入小人国。此事不等同于小人国的成立。",
+      "endpointNote": "Vic3 的 Beepeck 州全部五个省份归 A14；同名城市与 EU4 151 号省份使用相同 RGB。",
+      "geometryCertainty": "place-anchor-only",
+      "sourceIds": [
+        "diary6",
+        "states",
+        "regions",
+        "definitions"
+      ],
+      "vic3ProvinceRGB": "954e40",
+      "vic3State": "STATE_BEEPECK",
+      "evidenceLines": [
+        {
+          "source": "states",
+          "from": 646,
+          "to": 653
+        },
+        {
+          "source": "regions",
+          "from": 1563,
+          "to": 1577
+        }
+      ]
+    },
+    {
+      "id": "vertesk-transfer",
+      "name": "Vertesk",
+      "nameZh": "维特斯克",
+      "anchorProvinceId": 216,
+      "earliestYear": 1810,
+      "observedByYear": 1820,
+      "exactYear": null,
+      "fromActor": "v3:A01",
+      "sphereActor": "v3:A04",
+      "directActor": "v3:A19",
+      "description": "安本纳尔为争取对抗洛伦特的支持，将维特斯克让给北方联盟。",
+      "endpointNote": "1820 的维特斯克保留 A19 政权，作为北方联盟 A04 的傀儡；周围部分省份由联盟直接控制。",
+      "geometryCertainty": "place-anchor-only",
+      "sourceIds": [
+        "diary6",
+        "states",
+        "diplomacy",
+        "definitions",
+        "regions"
+      ],
+      "vic3ProvinceRGB": "1e5040",
+      "vic3State": "STATE_VERTESK",
+      "evidenceLines": [
+        {
+          "source": "states",
+          "from": 763,
+          "to": 775
+        },
+        {
+          "source": "regions",
+          "from": 1860,
+          "to": 1876
+        },
+        {
+          "source": "diplomacy",
+          "from": 79,
+          "to": 87
+        }
+      ]
+    },
+    {
+      "id": "bisan-transfer",
+      "name": "Bisan",
+      "nameZh": "比珊",
+      "anchorProvinceId": 300,
+      "earliestYear": 1810,
+      "observedByYear": 1820,
+      "exactYear": null,
+      "fromActor": "v3:A01",
+      "sphereActor": "v3:A02",
+      "directActor": "v3:A05",
+      "description": "黑火药战争中，比珊转入维文帝国势力。",
+      "endpointNote": "1820 文件保留比珊 A05 政权，外交设为维文帝国 A02 的傀儡。旧百科的 1790 战争日期未采用。",
+      "geometryCertainty": "place-anchor-only",
+      "sourceIds": [
+        "diary6",
+        "states",
+        "diplomacy",
+        "definitions",
+        "regions"
+      ],
+      "vic3ProvinceRGB": "2a7800",
+      "vic3State": "STATE_BISAN",
+      "evidenceLines": [
+        {
+          "source": "states",
+          "from": 182,
+          "to": 189
+        },
+        {
+          "source": "regions",
+          "from": 463,
+          "to": 475
+        },
+        {
+          "source": "diplomacy",
+          "from": 21,
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": "stingport-transfer",
+      "name": "Stingport",
+      "nameZh": "刺港",
+      "anchorProvinceId": 376,
+      "earliestYear": 1810,
+      "observedByYear": 1820,
+      "exactYear": null,
+      "fromActor": "v3:A01",
+      "sphereActor": "v3:A09",
+      "directActor": null,
+      "conflict": true,
+      "description": "开发日志记载，安本纳尔在黑火药战争中将刺港及部分殖民地丢失给布西拉尔。",
+      "endpointNote": "1820 源文件对相关城市省份同时列出 A01 与 A09 归属，尚未裁决；地图不指定最终直接所有者。殖民地范围暂未映射。",
+      "geometryCertainty": "place-anchor-only",
+      "sourceIds": [
+        "diary6",
+        "states",
+        "regions",
+        "definitions"
+      ],
+      "vic3ProvinceRGB": "359040",
+      "vic3State": "STATE_VERNE",
+      "evidenceLines": [
+        {
+          "source": "states",
+          "from": 64,
+          "to": 74
+        },
+        {
+          "source": "regions",
+          "from": 181,
+          "to": 195
+        }
+      ]
+    }
+  ],
+  "sourceCommit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2"
+}

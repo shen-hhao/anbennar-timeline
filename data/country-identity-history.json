@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "observations": [
+    {
+      "id": "moonhaven-ravelian-1820",
+      "tag": "A31",
+      "year": 1820,
+      "religion": "ravelian",
+      "sourceRefs": [
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A44---Moonhaven.txt"
+      ],
+      "note": "Vic3国家定义明确指定月港为揭秘教；只确证1820端点，不倒灌早期年份。"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "moonhaven-religion-window",
+      "tag": "A31",
+      "field": "religion",
+      "earliest": 1445,
+      "latest": 1820,
+      "from": "regent_court",
+      "to": "ravelian",
+      "sourceRefs": [
+        "eu4-country-A31",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A44---Moonhaven.txt"
+      ],
+      "note": "1444为摄政神庭，1820国教明确为揭秘教。这里只记录两个端点之间的待考窗口，未核定具体改宗年份；不表示1445已出现揭秘教。"
+    }
+  ],
+  "links": [
+    {
+      "eu4": "A01",
+      "vic3": "v3:A03",
+      "sourceRefs": [
+        "eu4-country-A01",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A03---Lorent.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A34",
+      "vic3": "v3:A05",
+      "sourceRefs": [
+        "eu4-country-A34",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A05---Bisan.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A05",
+      "vic3": "v3:A07",
+      "sourceRefs": [
+        "eu4-country-A05",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A07---Reveria.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A29",
+      "vic3": "v3:A09",
+      "sourceRefs": [
+        "eu4-country-A29",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A09---Busilar.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A19",
+      "vic3": "v3:A15",
+      "sourceRefs": [
+        "eu4-country-A19",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A15---Portnamm.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A23",
+      "vic3": "v3:A19",
+      "sourceRefs": [
+        "eu4-country-A23",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A19---Vertesk.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A32",
+      "vic3": "v3:A20",
+      "sourceRefs": [
+        "eu4-country-A32",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A20---Ibevar.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "B36",
+      "vic3": "v3:A29",
+      "sourceRefs": [
+        "eu4-country-B36",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A29---Marrhold.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A73",
+      "vic3": "v3:A37",
+      "sourceRefs": [
+        "eu4-country-A73",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A37---Silverforge.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A31",
+      "vic3": "v3:A44",
+      "sourceRefs": [
+        "eu4-country-A31",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A44---Moonhaven.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A03",
+      "vic3": "v3:A65",
+      "sourceRefs": [
+        "eu4-country-A03",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A65---Redglades.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A74",
+      "vic3": "v3:A70",
+      "sourceRefs": [
+        "eu4-country-A74",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A70---Nathalaire-TODO.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    },
+    {
+      "eu4": "A20",
+      "vic3": "v3:A75",
+      "sourceRefs": [
+        "eu4-country-A20",
+        "v3-common-country_definitions-anb_countries.txt",
+        "v3-common-history-countries-A75---Rubyhold.txt"
+      ],
+      "note": "同名持续政权的跨游戏身份对照；主文化字段采用不同游戏的分类口径，不能据此断言某年转文化。"
+    }
+  ],
+  "sources": {
+    "eu4-country-A01": {
+      "title": "EU4 MOD：history/countries/A01 - Lorent.txt",
+      "path": "history/countries/A01 - Lorent.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "ca0cef4d8d9d281bca8bdfdffadaa8471733a3f6326365d72c7736af01d53cd0",
+      "bytes": 1705
+    },
+    "v3-common-country_definitions-anb_countries.txt": {
+      "title": "Vic3 MOD：common/country_definitions/anb_countries.txt",
+      "path": "common/country_definitions/anb_countries.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/country_definitions/anb_countries.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "2136301fe58bc1943c4c5ea5d4468cee3a9c999f077bdafe074f3df734afc238",
+      "bytes": 91016
+    },
+    "v3-common-history-countries-A03---Lorent.txt": {
+      "title": "Vic3 MOD：common/history/countries/A03 - Lorent.txt",
+      "path": "common/history/countries/A03 - Lorent.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A03%20-%20Lorent.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "8d443344f7636550dec3f03cec93c7dffa7a485383262acaeee1fd5db62d14b0",
+      "bytes": 3204
+    },
+    "eu4-country-A34": {
+      "title": "EU4 MOD：history/countries/A34 - Bisan.txt",
+      "path": "history/countries/A34 - Bisan.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "b98fceba2082aaacf56a351518ef224bfee75fbd33141b1124c539171709e5ba",
+      "bytes": 636
+    },
+    "v3-common-history-countries-A05---Bisan.txt": {
+      "title": "Vic3 MOD：common/history/countries/A05 - Bisan.txt",
+      "path": "common/history/countries/A05 - Bisan.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A05%20-%20Bisan.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "1e86d12ec6c11ee47ba3cc5a36d0a4ba12f1458b2b0575d555cd5a41e1153f72",
+      "bytes": 2067
+    },
+    "eu4-country-A05": {
+      "title": "EU4 MOD：history/countries/A05 - Reveria.txt",
+      "path": "history/countries/A05 - Reveria.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "23975c3524d28d20738c8ceba37938b02932a70e2fc9334f9ae3dd8d4ca812ed",
+      "bytes": 1036
+    },
+    "v3-common-history-countries-A07---Reveria.txt": {
+      "title": "Vic3 MOD：common/history/countries/A07 - Reveria.txt",
+      "path": "common/history/countries/A07 - Reveria.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A07%20-%20Reveria.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "ee647e02919837997e0330c89c73edfabb43a304d9298eba87bff87986f2d687",
+      "bytes": 2155
+    },
+    "eu4-country-A29": {
+      "title": "EU4 MOD：history/countries/A29 - Busilar.txt",
+      "path": "history/countries/A29 - Busilar.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "0d6accc47e3b849dc973cf14c8d62ac4cab1abc3b058e1997c1d2de9640cdf74",
+      "bytes": 976
+    },
+    "v3-common-history-countries-A09---Busilar.txt": {
+      "title": "Vic3 MOD：common/history/countries/A09 - Busilar.txt",
+      "path": "common/history/countries/A09 - Busilar.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A09%20-%20Busilar.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "ab6d7ced7515e89df6669a4a30dca5c7fda59aaa33c60974026ec0ae6752f961",
+      "bytes": 2776
+    },
+    "eu4-country-A19": {
+      "title": "EU4 MOD：history/countries/A19 - Portnamm.txt",
+      "path": "history/countries/A19 - Portnamm.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "94d45e1f9a10029732a15ac038f887436da3147005c9ec54d9c71e1469757c45",
+      "bytes": 643
+    },
+    "v3-common-history-countries-A15---Portnamm.txt": {
+      "title": "Vic3 MOD：common/history/countries/A15 - Portnamm.txt",
+      "path": "common/history/countries/A15 - Portnamm.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A15%20-%20Portnamm.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "4b1a1413c951e408d27cfb5d0fd4e1f6698f29716afc8b28ff73d8024bf9f9a0",
+      "bytes": 2493
+    },
+    "eu4-country-A23": {
+      "title": "EU4 MOD：history/countries/A23 - Vertesk.txt",
+      "path": "history/countries/A23 - Vertesk.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "9c7dfbd63ae78f385dab47ae0412a40f04ab7897ba75f2cee9d287dccf580908",
+      "bytes": 941
+    },
+    "v3-common-history-countries-A19---Vertesk.txt": {
+      "title": "Vic3 MOD：common/history/countries/A19 - Vertesk.txt",
+      "path": "common/history/countries/A19 - Vertesk.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A19%20-%20Vertesk.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "78b2bf6ae056328a3da42262b37e16b0ad0812b68e77a0cde92490520275add5",
+      "bytes": 2340
+    },
+    "eu4-country-A32": {
+      "title": "EU4 MOD：history/countries/A32 - Ibevar.txt",
+      "path": "history/countries/A32 - Ibevar.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "ad21bbe7a5445d893db2cf236ee5f747cc444ca658661512a5f76a50cc4038a0",
+      "bytes": 634
+    },
+    "v3-common-history-countries-A20---Ibevar.txt": {
+      "title": "Vic3 MOD：common/history/countries/A20 - Ibevar.txt",
+      "path": "common/history/countries/A20 - Ibevar.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A20%20-%20Ibevar.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "c9e9b5e10bb313cab9ae919c6e2186647be5db7bfa3c2e14285543f1d186b89b",
+      "bytes": 2294
+    },
+    "eu4-country-B36": {
+      "title": "EU4 MOD：history/countries/B36 - Marrhold.txt",
+      "path": "history/countries/B36 - Marrhold.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "f811fe517047afa8b366203a038feb8652290f4597a66b986a0cef6350927e9c",
+      "bytes": 785
+    },
+    "v3-common-history-countries-A29---Marrhold.txt": {
+      "title": "Vic3 MOD：common/history/countries/A29 - Marrhold.txt",
+      "path": "common/history/countries/A29 - Marrhold.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A29%20-%20Marrhold.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "ca5a36e03f9d09a78a8c2a4b2329d40ef5ba7ef7c98ecbfeb784dd19c8275702",
+      "bytes": 1448
+    },
+    "eu4-country-A73": {
+      "title": "EU4 MOD：history/countries/A73 - Silverforge.txt",
+      "path": "history/countries/A73 - Silverforge.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "6911f1ba1bb1ac8d6c317527d92026b6018949b792044df2a30532910212411d",
+      "bytes": 830
+    },
+    "v3-common-history-countries-A37---Silverforge.txt": {
+      "title": "Vic3 MOD：common/history/countries/A37 - Silverforge.txt",
+      "path": "common/history/countries/A37 - Silverforge.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A37%20-%20Silverforge.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "ddc4bfd7075315c68c361af2e933312ccecfbf3e2078284eb658e7a3f8612b22",
+      "bytes": 1984
+    },
+    "eu4-country-A31": {
+      "title": "EU4 MOD：history/countries/A31 - Moonhaven.txt",
+      "path": "history/countries/A31 - Moonhaven.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "a1e10a9efecd0935abd853d62ccca833ba6162b5c6e92c0a7f77bbeb33890d74",
+      "bytes": 896
+    },
+    "v3-common-history-countries-A44---Moonhaven.txt": {
+      "title": "Vic3 MOD：common/history/countries/A44 - Moonhaven.txt",
+      "path": "common/history/countries/A44 - Moonhaven.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A44%20-%20Moonhaven.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "a0ff4813c4d7da04a2432f6fae86424336896d4ca5e838730609d0061c1290d5",
+      "bytes": 2248
+    },
+    "eu4-country-A03": {
+      "title": "EU4 MOD：history/countries/A03 - Redglades.txt",
+      "path": "history/countries/A03 - Redglades.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "15dd5dad05bc6fbb600fe84b144843eb25a516753631cb22c19da7bfe5b64ab6",
+      "bytes": 803
+    },
+    "v3-common-history-countries-A65---Redglades.txt": {
+      "title": "Vic3 MOD：common/history/countries/A65 - Redglades.txt",
+      "path": "common/history/countries/A65 - Redglades.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A65%20-%20Redglades.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "902c205ab75512670b55b2736c348edc60a64f082fdcfbb895b076ccd2866444",
+      "bytes": 2207
+    },
+    "eu4-country-A74": {
+      "title": "EU4 MOD：history/countries/A74 - Nathalaire.txt",
+      "path": "history/countries/A74 - Nathalaire.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "a63072693a62064c4fcc69580433734597eca7e949d95366c4b751cf0e039260",
+      "bytes": 661
+    },
+    "v3-common-history-countries-A70---Nathalaire-TODO.txt": {
+      "title": "Vic3 MOD：common/history/countries/A70 - Nathalaire TODO.txt",
+      "path": "common/history/countries/A70 - Nathalaire TODO.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A70%20-%20Nathalaire%20TODO.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "711b59b38dfd0ef082f037920cbf2764144b2cb182c079c5ae7658f8d316fb51",
+      "bytes": 1837
+    },
+    "eu4-country-A20": {
+      "title": "EU4 MOD：history/countries/A20 - Rubyhold.txt",
+      "path": "history/countries/A20 - Rubyhold.txt",
+      "sourceFolder": "Anbennar-PublicFork",
+      "url": null,
+      "sha256": "b2ba3fdd4189c6853a9cbceb67e2dcee9dc27210a7d4b69185ee82094232dbf5",
+      "bytes": 1855
+    },
+    "v3-common-history-countries-A75---Rubyhold.txt": {
+      "title": "Vic3 MOD：common/history/countries/A75 - Rubyhold.txt",
+      "path": "common/history/countries/A75 - Rubyhold.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A75%20-%20Rubyhold.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "7ceddb5b4210bdd901a7d903c40fe899eba3e9f4710f9964d0a8168676099c85",
+      "bytes": 2237
+    }
+  },
+  "policy": "不把可选任务/事件改宗当作正史，不将文化默认宗教当国教，不按宗教改革年份批量改宗；跨游戏文化分类差异只对照，不虚构文化替换年份。"
+}

@@ -1,0 +1,12 @@
+{
+  "releaseId": "community-preview-20260923",
+  "baseCandidateVersion": "0.25.0",
+  "releaseDate": "2026-09-23",
+  "status": "community-preview",
+  "repository": "https://github.com/shen-hhao/anbennar-timeline",
+  "site": "https://shen-hhao.github.io/anbennar-timeline/",
+  "feedback": "https://github.com/shen-hhao/anbennar-timeline/issues/new/choose",
+  "publication": {"mode": "manually-pushed-pages-branch", "branch": "gh-pages", "customWorkflows": false},
+  "scope": {"years": [1444, 1820], "reviewedOldWorldProvinces": 3565, "politicalSteps": 1123, "events": 2347, "researchRecords": 4967, "insyaaIncluded": false},
+  "qualification": "Community reconstruction with explicit uncertainty; not an official Anbennar release or a claim of complete historical certainty."
+}

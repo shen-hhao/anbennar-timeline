@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="zh-CN">
+
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>资料库与进度 · 哈兰历史地图</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23202020'/%3E%3Cpath d='M8 8h16v16H8zM8 13h16M13 13v11' fill='none' stroke='white'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="./research.css"></head>
+
+<body>
+
+<header class="register-header"><a href="./" class="brand">哈兰历史地图 <small>ANBENNAR · 0.25</small></a><nav aria-label="网站导航"><a href="./">历史地图</a><a href="./research.html" aria-current="page">资料库与进度</a><a href="./continuity.html">连续推演与依据</a><a href="./references.html">参考材料</a></nav></header>
+
+<main>
+
+  <section class="register-intro"><p class="eyebrow">RESEARCH REGISTER · 1444—1820</p><h1>把已知与空白，一起记录。</h1><p>从地区到国家，查看收录的变化、推测方案和仍需核对的年代。资料登记与历史审校分开统计。</p></section>
+
+  <p id="register-loading" role="status">正在读取国家资料库…</p>
+
+  <div id="register-view" hidden>
+
+    <div class="scope-controls"><nav id="breadcrumbs" aria-label="地区层级"></nav><label>来源 <select id="source-filter"><option value="all">全部来源 TAG</option><option value="eu4">EU4 定义</option><option value="v3">Vic3 定义</option><option value="hist">本站重建实体</option></select></label></div>
+
+    <p class="canon-notes"><a href="./continuity.html">连续推演与逐省依据 →</a> · 推演完整性与史实审校分别核验。</p>
+    <p id="reconstruction-summary" class="counting-note"></p>
+    <section id="progress-summary" class="progress-summary" aria-label="地区研究进度"></section>
+    <p class="counting-note">国家按来源 TAG 分别登记，跨游戏同一政权可能有多条。地区按首都或已标注的归档锚点分组；每条只计一次。隐厦及系统占位不计入完成率。Vic3 的独立分组与跨区情况另列，尚未强行对应 EU4 子地区。</p>
+
+    <section id="region-section"><div class="section-heading"><h2>按地区深入</h2><span id="region-context"></span></div><div id="region-list" class="region-grid"></div></section>
+
+    <section class="country-section"><div class="section-heading"><h2>国家研究目录</h2><span id="country-count"></span></div><div class="country-filters"><label for="register-search" class="sr-only">搜索资料库国家</label><input type="search" id="register-search" placeholder="国家名称、English 或 TAG"><label for="status-filter" class="sr-only">研究状态</label><select id="status-filter"><option value="all">全部状态</option><option value="in_progress">梳理中</option><option value="registered">已登记 · 待研究</option><option value="complete">全期审校通过</option><option value="deferred">暂缓研究</option><option value="reference">系统 / 动态占位</option></select></div>
+
+    <div class="table-scroll"><table><thead><tr><th>国家 / 政权</th><th>研究状态</th><th>节点</th><th>未决问题</th></tr></thead><tbody id="country-rows"></tbody></table></div><div class="pagination"><button id="previous-page">← 上一页</button><span id="page-number"></span><button id="next-page">下一页 →</button></div></section>
+
+    <details class="methodology"><summary>完成度如何计算，资料如何维护？</summary><p id="completion-policy"></p><p>“全期”指核对 1444—1820 内的实际存在期；没有存在的年代也需给出依据。未知边界可以保留，但必须明确登记问题，不能用推测填色代替审校。</p><p>本地 SQLite 保存审校、未决问题和手工研究记录，网页读取由数据库导出的静态快照。重新导入 MOD 和既有时间线会保留手工维护的内容。</p><p>先用 <code>python scripts/research_db.py show eu4:A30</code> 查看，随后使用 <code>review</code>、<code>resolve</code> 或 <code>add-record</code> 维护。命令会更新网页快照。完整操作见项目的数据库维护说明。</p><p id="inventory-policy"></p><p id="register-updated"></p></details>
+
+  </div>
+
+  <section id="country-detail" hidden aria-label="国家研究详情"></section>
+
+</main><footer>哈兰历史地图 · 来源可追溯，推测可辨识。</footer>
+
+<script type="module" src="./research.js"></script>
+
+</body></html>
+

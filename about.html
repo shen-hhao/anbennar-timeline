@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="哈兰历史地图社区预览：项目说明、资料来源与参与方式。">
+  <title>项目与反馈 · 哈兰历史地图</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#272727;background:#faf9f6}
+    *{box-sizing:border-box}body{margin:0}header,main,footer{width:min(850px,100% - 40px);margin:auto}
+    header{padding:26px 0;border-bottom:1px solid #dedbd4;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    a{color:#665034;text-underline-offset:3px;overflow-wrap:anywhere}header a{text-decoration:none}main{padding:42px 0}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.3;margin:12px 0 20px;letter-spacing:-.03em}h2{font-size:21px;margin:36px 0 12px}
+    p,li{font-size:16px;line-height:1.9}li{margin:8px 0}.eyebrow{font-size:13px;letter-spacing:.12em;color:#796a55}
+    .intro{color:#5f5b54}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}.actions a{display:inline-block;padding:11px 17px;border:1px solid #a89981;border-radius:6px;text-decoration:none}
+    .actions a:first-child{background:#665034;color:#fff;border-color:#665034}footer{padding:20px 0 32px;border-top:1px solid #dedbd4;color:#756f65;font-size:13px;line-height:1.8}
+    code{font-size:.88em;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #ad8351;outline-offset:4px}@media(max-width:480px){main{padding-top:28px}ul{padding-left:21px}}
+  </style>
+</head>
+<body>
+  <header><a href="./">← 返回历史地图</a><a href="https://github.com/shen-hhao/anbennar-timeline">GitHub 仓库 ↗</a></header>
+  <main>
+    <div class="eyebrow">HALANN HISTORICAL ATLAS · COMMUNITY PREVIEW</div>
+    <h1>一起补全哈兰的历史</h1>
+    <p class="intro">这是由社区维护的非官方历史地图，浏览1444—1820年的国家、关系与历史阶段。当前为基于0.25.0研究候选的社区预览，欢迎提供来源、校对中文和报告地图问题。</p>
+    <nav class="actions" aria-label="参与项目">
+      <a href="https://github.com/shen-hhao/anbennar-timeline/issues/new/choose">提交问题或补充资料</a>
+      <a href="https://github.com/shen-hhao/anbennar-timeline/blob/main/CONTRIBUTING.md">阅读贡献指南</a>
+      <a href="https://github.com/shen-hhao/anbennar-timeline/blob/main/docs/AGENT_WORKFLOW.md">使用 Agent 协助</a>
+    </nav>
+    <h2>怎样提供有用的反馈</h2>
+    <p>写出查看的年份、地区或国家、看到的问题，并附可找到原文的链接或截图。省份ID和准确年份不知道也可以提交。对存在多个版本的叙述，请同时留下反证和不确定之处。</p>
+    <p>反馈由维护者在本机整理和核验，审定后的内容分批更新到网站。代码或史料提案可通过Pull Request提交；网站不会因普通提交或讨论自动改变。</p>
+    <h2>如何理解这张地图</h2>
+    <ul>
+      <li>1444开局、来源观察、历史事件与网页采用的推定年份分别处理。1820投影不表示所有转属都发生在1820。</li>
+      <li>中间年代的阶段和边界含推演。地方共同体、分治与投影争议保留文字限定，关闭彩色条纹不会提高历史确定性。</li>
+      <li>已有归属不会仅因确年或后继未知直接清空。37项阶段限定和19个1820有界续接继续保留，隐厦暂未纳入。</li>
+      <li>原始研究数据库、私人原件与完整研究构建链未随公开仓库分发。网站JSON保留可审查记录、来源定位及部分原文摘录。</li>
+    </ul>
+    <p><a href="./research.html">资料库与进度</a> · <a href="./continuity.html">连续推演与依据</a> · <a href="./references.html">来源目录</a></p>
+    <h2>来源、署名与素材使用</h2>
+    <p>Anbennar的世界设定、模组地图、国家旗帜与相关文本归其原作者和贡献者所有。感谢Anbennar EU4、Vic3开发团队，中文汉化团队与适用的52汉化上游贡献，以及提供年表、作者答复和考据的社区成员。Paradox相关游戏与素材仍归相应权利方。</p>
+    <ul>
+      <li><a href="https://gitlab.com/anbennar/anbennar-eu4-dev">Anbennar EU4 官方仓库</a></li>
+      <li><a href="https://gitlab.com/anbennar/anbennar-vicky3-dev">Anbennar Vic3 官方仓库</a></li>
+      <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2818493730">Anbennar Chinese ver 汉化发布页</a></li>
+    </ul>
+    <p>本站为非商业社区研究项目，不代表上述团队或Paradox的官方认可。第三方内容遵循各自适用条款；本项目不替原作者授予统一再分发许可。引用、译名与识别旗帜用于来源讨论和历史展示，不能据此推定可任意复用。</p>
+    <p>权利方或官方维护者如希望修正署名、限制展示或移除具体材料，请通过<a href="https://github.com/shen-hhao/anbennar-timeline/issues/new/choose">仓库反馈入口</a>说明对应位置；维护者将核实并按适用要求处理。完整说明见<a href="https://github.com/shen-hhao/anbennar-timeline/blob/main/THIRD_PARTY_NOTICES.md">素材归属与使用说明</a>。</p>
+  </main>
+  <footer>首发快照：<code>community-preview-20260923</code> · 基础候选：0.25.0<br>当前快照信息可见 <a href="./release.json">release.json</a>。具体研究缺口保留在相关记录中。</footer>
+</body>
+</html>

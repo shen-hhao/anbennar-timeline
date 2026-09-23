@@ -1,0 +1,733 @@
+{
+  "schemaVersion": 1,
+  "startYear": 1444,
+  "endYear": 1820,
+  "checked": "2026-09-17",
+  "policy": {
+    "imperialActualControl": "用户定义：全体已认定帝国成员的实际领土集合，与皇帝或中央直接拥有土地分开。",
+    "legalJurisdiction": "1444本地hre省份基线及经核变更；成员加入退出、宣称放弃不自动增加删除所有同名省份。",
+    "rulers": "[start,endExclusive)；未覆盖区间返回unknown，禁止将上一任延至1820。1810起无在位皇帝。",
+    "uncertainty": "hypothesis仅推演模式采用；任务宣称、帝国改革选项与资料缺口不能冒充已发生史实。"
+  },
+  "rulers": [
+    {
+      "start": 1444,
+      "endExclusive": 1470,
+      "person": "Lothane III síl Wex",
+      "nameZh": "洛锡安三世·西尔·韦克斯",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A30",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-lothane-wex",
+        "imperial-wex"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "1444是网站截取起点而非即位年；来源对1421/1423分歧，1470终结一致。"
+    },
+    {
+      "start": 1470,
+      "endExclusive": 1476,
+      "person": "Caylen I síl na Trisfer",
+      "nameZh": "凯伦一世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1476,
+      "endExclusive": 1477,
+      "person": "Raubin I síl Estallen",
+      "nameZh": "劳宾一世·西尔·埃斯塔伦",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A93",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1477,
+      "endExclusive": 1493,
+      "person": "Tomás II síl na Trisfer",
+      "nameZh": "托马斯二世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1493,
+      "endExclusive": 1532,
+      "person": "Caylen II síl na Trisfer",
+      "nameZh": "凯伦二世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1532,
+      "endExclusive": 1542,
+      "person": "Galien I síl na Trisfer",
+      "nameZh": "加利恩一世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1542,
+      "endExclusive": 1568,
+      "person": "Tristan I Vanbury",
+      "nameZh": "特里斯坦一世·范伯里",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A62",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1568,
+      "endExclusive": 1589,
+      "person": "Artus I Vanbury",
+      "nameZh": "阿图斯一世·范伯里",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A62",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1589,
+      "endExclusive": 1598,
+      "person": "Tristan II Vanbury",
+      "nameZh": "特里斯坦二世·范伯里",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A62",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1598,
+      "endExclusive": 1616,
+      "person": "Andrel I síl Aranmas",
+      "nameZh": "安德雷尔一世·西尔·阿兰马斯",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A89",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1616,
+      "endExclusive": 1627,
+      "person": "Casetin I síl Themarenn",
+      "nameZh": "卡塞廷一世·西尔·塞马伦",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A95",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1627,
+      "endExclusive": 1648,
+      "person": "Galien II síl na Trisfer",
+      "nameZh": "加利恩二世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1648,
+      "endExclusive": 1658,
+      "person": "Alvar I síl Verne",
+      "nameZh": "阿尔瓦一世·西尔·韦尔恩",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A33",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1658,
+      "endExclusive": 1661,
+      "person": "Caylen III síl na Trisfer",
+      "nameZh": "凯伦三世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1661,
+      "endExclusive": 1666,
+      "person": "Arman I síl Verne",
+      "nameZh": "阿尔曼一世·西尔·韦尔恩",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A33",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1666,
+      "endExclusive": 1692,
+      "person": "Galien III síl na Trisfer",
+      "nameZh": "加利恩三世·西尔·纳·特里斯费尔",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "A11",
+      "sourceIds": [
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "年度显示从继任年起归新任，不表示前任在上一年最后一天离位。"
+    },
+    {
+      "start": 1692,
+      "endExclusive": 1730,
+      "person": "Camir I Silmuna",
+      "nameZh": "卡米尔一世·希尔穆纳",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "hist:anbennar",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-dameria-monarchs",
+        "imperial-camir"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "兼有达梅里亚大公爵位；实体已绘土地可表示本次重建的部分直辖，不能解释为完整直辖界或全帝国成员领土。 原努尔塞斯提尔国王身份不自动将其全境加入帝国法理疆域。",
+      "directCountryTags": [
+        "hist:anbennar",
+        "hist:restored-dameria"
+      ],
+      "homeCountryTag": "B53"
+    },
+    {
+      "start": 1730,
+      "endExclusive": 1739,
+      "person": "Lothane IV Silmuna",
+      "nameZh": "洛锡安四世·希尔穆纳",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "hist:anbennar",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-dameria-monarchs"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "兼有达梅里亚大公爵位；实体已绘土地可表示本次重建的部分直辖，不能解释为完整直辖界或全帝国成员领土。",
+      "directCountryTags": [
+        "hist:anbennar",
+        "hist:restored-dameria"
+      ]
+    },
+    {
+      "start": 1739,
+      "endExclusive": 1805,
+      "person": "Madaléin Silmuna",
+      "nameZh": "玛达蕾恩·希尔穆纳",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "hist:anbennar",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-dameria-monarchs"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "兼有达梅里亚大公爵位；实体已绘土地可表示本次重建的部分直辖，不能解释为完整直辖界或全帝国成员领土。",
+      "directCountryTags": [
+        "hist:anbennar",
+        "hist:restored-dameria"
+      ]
+    },
+    {
+      "start": 1805,
+      "endExclusive": 1810,
+      "person": "Marion III Silmuna",
+      "nameZh": "马里昂三世·希尔穆纳",
+      "nameZhStatus": "本站暂译",
+      "countryTag": "hist:anbennar",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-dameria-monarchs"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "兼有达梅里亚大公爵位；实体已绘土地可表示本次重建的部分直辖，不能解释为完整直辖界或全帝国成员领土。",
+      "directCountryTags": [
+        "hist:anbennar",
+        "hist:restored-dameria"
+      ]
+    }
+  ],
+  "regimes": [
+    {
+      "start": 1444,
+      "endExclusive": 1692,
+      "type": "empire",
+      "subtype": "elective-monarchy",
+      "label": "选帝制的安本纳尔帝国",
+      "sourceIds": [
+        "imperial-dd91",
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki-and-official-outline",
+      "notes": "逐步整合的帝国；成员实际领土与皇帝个人直辖分开。"
+    },
+    {
+      "start": 1692,
+      "endExclusive": 1810,
+      "type": "empire",
+      "subtype": "dynastic-centralization",
+      "label": "希尔穆纳王朝与中央集权",
+      "sourceIds": [
+        "imperial-dd91",
+        "imperial-dameria-monarchs",
+        "imperial-camir"
+      ],
+      "certainty": "setting-wiki-and-official-outline",
+      "notes": "卡米尔建立世袭王朝并推进统一；无证据让所有诸侯在1692同日变为中央直辖。"
+    },
+    {
+      "start": 1810,
+      "endExclusive": 1820,
+      "type": "republic",
+      "subtype": "revolutionary-transition",
+      "label": "黑火药战争与共和转型",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-timeline"
+      ],
+      "certainty": "setting-wiki-transition",
+      "notes": "1810为马里昂三世死亡与革命开始的年度节点；共和宣告及全国稳定日期待核，不显示在位皇帝，不据此认定共和国控制了全部战时领土。"
+    },
+    {
+      "start": 1820,
+      "endExclusive": 1821,
+      "type": "republic",
+      "subtype": "parliamentary-republic",
+      "label": "安本纳尔共和国",
+      "countryTag": "v3:A01",
+      "sourceIds": [
+        "v3-common-history-countries-A01---Anbennar.txt"
+      ],
+      "certainty": "official-mod-snapshot",
+      "notes": "固定 Vic3 开局采用议会共和制；中央与附属领土已映射至 EU4 省形，边界仍待审校，朝贡国不计入实控。"
+    }
+  ],
+  "jurisdictionSteps": [
+    {
+      "id": "saloren-departure-1456",
+      "year": 1456,
+      "leaveTags": [
+        "A87"
+      ],
+      "sourceIds": [
+        "imperial-modern-lorent",
+        "imperial-lorent",
+        "imperial-empire-notes"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "萨洛伦臣服洛伦特并保留自治，帝国失去葡萄酒湾最后独立成员。成员退出可定年；不把自治臣服自动等同于旧省形全部永久失去帝国法理声索。"
+    },
+    {
+      "id": "caylen-claims-renunciation-1474",
+      "year": 1474,
+      "claimWithdrawals": [
+        "Carneter / Ilvandet",
+        "Roilsard"
+      ],
+      "claimsRetained": [
+        "Tretun"
+      ],
+      "sourceIds": [
+        "imperial-modern-lorent",
+        "imperial-lorent"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "皇帝凯伦放弃卡内特／伊尔凡德及罗伊尔萨德的帝国声索，明确保留特雷通。两来源第一地区名称异文，完整条约界待核；此条只记已知政治事实。"
+    },
+    {
+      "id": "caylen-claims-minimal-projection-1474",
+      "year": 1474,
+      "removeProvinceIds": [
+        19,
+        31,
+        59
+      ],
+      "retainedProvinceIds": [
+        40,
+        47,
+        48
+      ],
+      "sourceIds": [
+        "imperial-modern-lorent",
+        "imperial-lorent"
+      ],
+      "certainty": "hypothesis",
+      "notes": "仅在含推测模式以同名省19 Carneter、31 Ilvandet、59 Roilsard作最小地理投影；两来源Carneter/Ilvandet异文，不能认作完整条约边界。不得撤去特雷通40/47/48，不整选罗伊尔萨德核心或整个area。"
+    },
+    {
+      "id": "plumwall-immediate-prince-1475",
+      "year": 1475,
+      "joinTags": [
+        "Z41"
+      ],
+      "anchorProvinceIds": [
+        281
+      ],
+      "sourceIds": [
+        "imperial-wex",
+        "imperial-empire-notes"
+      ],
+      "certainty": "setting-wiki-working-notes",
+      "notes": "奥托1475反叛韦克斯并宣布普鲁姆瓦尔为皇帝直属公国；是帝国内新成员身份，非新增外部法理土地。省281同名锚点，省910扩展仍为既有推演。"
+    },
+    {
+      "id": "wex-restored-members-1478",
+      "year": 1478,
+      "joinTags": [
+        "Z40",
+        "Z42"
+      ],
+      "sourceIds": [
+        "imperial-wex",
+        "imperial-empire-notes",
+        "v05-emp-acromton",
+        "v05-local-cores"
+      ],
+      "certainty": "hypothesis",
+      "notes": "配套1478韦克斯清算的推演归还方案：阿克罗姆顿、瓦里瓦尔恢复为帝国内部政权；恢复年份与受让省份非已核条约。涉及省2、5、276、330原已属于1444帝国法理基线，此条仅补成员身份，不增删法理省份。"
+    },
+    {
+      "id": "gabelaire-freedom-observation-1582",
+      "year": 1582,
+      "joinTags": [
+        "hist:gabelaire",
+        "B80"
+      ],
+      "anchorProvinceIds": [
+        15,
+        16
+      ],
+      "sourceIds": [
+        "imperial-rogieria-monarchs"
+      ],
+      "certainty": "hypothesis",
+      "notes": "1582是1575—1582叙述任期观察终点；资料确认Windtower与Gabelaire自由市的新设，但无精确成立年。只在推演模式补成员，不作为已核入帝年份。"
+    },
+    {
+      "id": "restored-dameria-title-1692",
+      "year": 1692,
+      "joinTags": [
+        "hist:restored-dameria"
+      ],
+      "sourceIds": [
+        "imperial-dameria-monarchs"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "卡米尔以本人及后裔恢复达梅里亚大公爵位；该实体属于帝国。现有七省mask来自有标记的游戏条件投影，此来源不证明完整公国疆域。"
+    }
+  ],
+  "politicalEvents": [
+    {
+      "id": "wex-emperor-loss-1470",
+      "year": 1470,
+      "title": "韦克斯失去皇位",
+      "sourceIds": [
+        "imperial-wex",
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "皇位转交珠边，不改变全帝国省份的领主。"
+    },
+    {
+      "id": "wex-ducal-downgrade-1478",
+      "year": 1478,
+      "title": "韦克斯大公国降为公国",
+      "sourceIds": [
+        "imperial-wex",
+        "imperial-empire-notes"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "降爵与内部清算；残余公国仍属帝国，具体受让省份保留既有推演标记。"
+    },
+    {
+      "id": "elensbridge-settlement",
+      "year": 1542,
+      "title": "埃伦斯桥和约",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-timeline",
+        "imperial-modern-lorent"
+      ],
+      "certainty": "disputed-date",
+      "notes": "诸侯取得宗教选择权；总年表记1535—1542，洛伦特时间线记1552—1553，不据争议年自动改宗或改界。"
+    },
+    {
+      "id": "peace-esmaria-1645",
+      "year": 1645,
+      "title": "埃斯玛利亚和约",
+      "sourceIds": [
+        "imperial-timeline",
+        "imperial-emperors"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "第一次科林战争结束，宗教选择权扩至臣民；不等于分裂或全民改宗。"
+    },
+    {
+      "id": "camiran-election-1692",
+      "year": 1692,
+      "title": "卡米尔取得鸽座",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-camir",
+        "imperial-timeline"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "1690—1704征服战争中的皇位更替；即位后仍在征战，不替代各地实际征服日期。"
+    },
+    {
+      "id": "mages-peace-1735",
+      "year": 1735,
+      "title": "继承战争结束与法师和平",
+      "sourceIds": [
+        "imperial-timeline",
+        "imperial-dameria-monarchs"
+      ],
+      "certainty": "setting-wiki",
+      "notes": "战争区间1730—1735；洛锡安四世1730继位，不代表该年各地局势已稳定。"
+    },
+    {
+      "id": "blackpowder-regime-1810",
+      "year": 1810,
+      "title": "黑火药革命与帝制终结",
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-timeline",
+        "v3-common-history-countries-A01---Anbennar.txt"
+      ],
+      "certainty": "setting-wiki-and-official-endpoint",
+      "notes": "1810结束皇帝序列，1820官方开局确认共和国；期间割地、分裂与旧王朝残余分别核查。"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "lothane-accession",
+      "topic": "洛锡安三世即位年",
+      "variants": [
+        1421,
+        1423
+      ],
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-timeline",
+        "imperial-lothane-wex"
+      ],
+      "decision": "1444截取起始不受影响，1470终结一致。"
+    },
+    {
+      "id": "elensbridge-war-dates",
+      "topic": "埃伦斯桥战争年代",
+      "variants": [
+        "1535—1542",
+        "1552—1553"
+      ],
+      "sourceIds": [
+        "imperial-timeline",
+        "imperial-modern-lorent"
+      ],
+      "decision": "以总年表作显示主线并显式标争议，不驱动国界或宗教。"
+    },
+    {
+      "id": "shadowmoon-date",
+      "topic": "影月阴谋日期",
+      "variants": [
+        1567,
+        1573
+      ],
+      "sourceIds": [
+        "imperial-shadowmoon",
+        "imperial-modern-lorent"
+      ],
+      "decision": "不能合成为连续战争或成功复国。"
+    },
+    {
+      "id": "claims-place-1474",
+      "topic": "1474放弃声索的地区名",
+      "variants": [
+        "Carneter and Roilsard",
+        "Ilvandet and Roilsard"
+      ],
+      "sourceIds": [
+        "imperial-modern-lorent",
+        "imperial-lorent"
+      ],
+      "decision": "已知条约年与最低同名省形投影分开；保留Tretun，完整范围待核。"
+    },
+    {
+      "id": "republic-proclamation",
+      "topic": "共和国正式宣告年",
+      "variants": [
+        "1810革命与帝王表终结",
+        "1820官方共和国开局"
+      ],
+      "sourceIds": [
+        "imperial-emperors",
+        "imperial-timeline",
+        "v3-common-history-countries-A01---Anbennar.txt"
+      ],
+      "decision": "1810—1819标共和转型；不虚构完整稳定政权成立日或在位皇帝。"
+    }
+  ],
+  "sources": {
+    "imperial-emperors": {
+      "title": "List of Anbennarian Emperors",
+      "url": "https://anbennar.fandom.com/wiki/List_of_Anbennarian_Emperors",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-wex": {
+      "title": "Grand Duchy of Wex",
+      "url": "https://anbennar.fandom.com/wiki/Grand_Duchy_of_Wex",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-lothane-wex": {
+      "title": "Lothane III síl Wex",
+      "url": "https://anbennar.fandom.com/wiki/Lothane_III_s%C3%ADl_Wex",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-empire-notes": {
+      "title": "Empire of Anbennar: 1444–1500 field notes",
+      "url": "https://anbennar.fandom.com/wiki/Empire_of_Anbennar",
+      "tier": "setting_wiki_working_notes",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-dameria-monarchs": {
+      "title": "List of Damerian monarchs",
+      "url": "https://anbennar.fandom.com/wiki/List_of_Damerian_monarchs",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-rogieria-monarchs": {
+      "title": "List of Rogierian monarchs",
+      "url": "https://anbennar.fandom.com/wiki/List_of_Rogierian_monarchs",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-shadowmoon": {
+      "title": "Shadowmoon Conspiracy",
+      "url": "https://anbennar.fandom.com/wiki/Shadowmoon_Conspiracy",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-modern-lorent": {
+      "title": "Modern Lorentish Timeline",
+      "url": "https://anbennar.fandom.com/wiki/Modern_Lorentish_Timeline",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-camir": {
+      "title": "Camir I Silmuna",
+      "url": "https://anbennar.fandom.com/wiki/Camir_I_Silmuna",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-moonhaven": {
+      "title": "Elfrealm of Moonhaven",
+      "url": "https://anbennar.fandom.com/wiki/Elfrealm_of_Moonhaven",
+      "tier": "setting_wiki",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID",
+      "checked": "2026-09-17"
+    },
+    "imperial-timeline": {
+      "title": "Timeline — Jahanic Timeline",
+      "url": "https://anbennar.fandom.com/wiki/Timeline",
+      "tier": "setting_wiki",
+      "checked": "2026-09-17",
+      "access": "Full developer diary; wiki via search-indexed article text, direct robots-blocked and no fixed revision"
+    },
+    "imperial-lorent": {
+      "title": "Kingdom of Lorent",
+      "url": "https://anbennar.fandom.com/wiki/Kingdom_of_Lorent",
+      "tier": "setting_wiki",
+      "checked": "2026-09-17",
+      "access": "Full developer diary; wiki via search-indexed article text, direct robots-blocked and no fixed revision"
+    },
+    "imperial-dd91": {
+      "title": "EU4 Dev Diary #91 — Anbennar Means Unity",
+      "url": "https://www.reddit.com/r/Anbennar/comments/1laf26k/eu4_dev_diary_91_anbennar_means_unity/",
+      "tier": "official_developer_diary",
+      "checked": "2026-09-17",
+      "access": "Full developer diary; wiki via search-indexed article text, direct robots-blocked and no fixed revision"
+    },
+    "v3-common-history-countries-A01---Anbennar.txt": {
+      "title": "Vic3 MOD：common/history/countries/A01 - Anbennar.txt",
+      "path": "common/history/countries/A01 - Anbennar.txt",
+      "url": "https://gitlab.com/anbennar/anbennar-vicky3-dev/-/blob/ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2/common/history/countries/A01%20-%20Anbennar.txt",
+      "commit": "ed8d1a55dc3b5d8499f72bcd6bd3cf7028d842b2",
+      "sha256": "4c9b8ba9efaaf6e2731322704cdd0c302dbd0b6e1e1a1713b9ac5b5b9a52a82b",
+      "bytes": 6604,
+      "tier": "official_mod_pinned_snapshot"
+    },
+    "v05-emp-acromton": {
+      "title": "Duchy of Acromton",
+      "url": "https://anbennar.fandom.com/wiki/Duchy_of_Acromton",
+      "tier": "setting_wiki",
+      "quote": "The Duchy of Acromton contained the province and town of Acromton and the province of Damescross.",
+      "access": "search-indexed text checked 2026-09-17; direct Fandom robots-blocked; no immutable revision ID"
+    },
+    "v05-local-cores": {
+      "title": "EU4 本地省份历史 · 核心与开局领土",
+      "url": "https://gitlab.com/anbennar/anbennar-eu4-dev/-/tree/new-master/history/provinces",
+      "class": "local_mod_claims_not_canon",
+      "note": "逐省提取与哈希见 empire-0.5-evidence.json。核心是分配方案线索，不能证明史实归属。"
+    }
+  }
+}

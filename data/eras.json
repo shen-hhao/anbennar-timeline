@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "note": "参考脚本 start 字段的约略分期；实际游戏换代由条件与 120 个月进度决定。",
+  "eras": [
+    {
+      "id": "age_of_discovery",
+      "name": "Age of Monsters",
+      "nameZh": "怪物时代",
+      "displayStart": 1444,
+      "displayEnd": 1530,
+      "condition": "always = yes；1444.11.11开局处在此时代。",
+      "source": "common/ages/00_default.txt:2",
+      "scriptStart": 1400,
+      "usherInMonths": 120
+    },
+    {
+      "id": "age_of_reformation",
+      "name": "Age of Unraveling",
+      "nameZh": "揭秘时代",
+      "displayStart": 1530,
+      "displayEnd": 1620,
+      "condition": "未删除坎诺：castellos_is_dead全局旗标存在，或已经1560年；删除坎诺：已经1530年。条件满足120个月。",
+      "source": "common/ages/00_default.txt:517",
+      "scriptStart": 1530,
+      "usherInMonths": 120
+    },
+    {
+      "id": "age_of_absolutism",
+      "name": "Age of Witch-Kings",
+      "nameZh": "巫师王时代",
+      "displayStart": 1620,
+      "displayEnd": 1710,
+      "condition": "global_trade思潮已启用，持续120个月。",
+      "source": "common/ages/00_default.txt:977",
+      "scriptStart": 1620,
+      "usherInMonths": 120
+    },
+    {
+      "id": "age_of_revolutions",
+      "name": "Age of Artificers",
+      "nameZh": "奇械时代",
+      "displayStart": 1710,
+      "displayEnd": 1821,
+      "condition": "enlightenment思潮已启用，持续120个月。",
+      "source": "common/ages/00_default.txt:1350",
+      "scriptStart": 1710,
+      "usherInMonths": 120
+    }
+  ]
+}
