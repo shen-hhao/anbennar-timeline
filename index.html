@@ -149,7 +149,7 @@
 
         <div id="map-notice" class="map-notice" hidden><strong id="notice-title"></strong><p id="notice-text"></p><button id="back-to-baseline" class="text-button">查看 1444 开局 <span aria-hidden="true">→</span></button></div>
 
-        <div id="loading" class="loading" role="status"><span class="spinner" aria-hidden="true"></span><span id="loading-text">正在读取官方省份地图…</span><button id="reload-button" hidden>重新加载</button></div>
+        <div id="loading" class="loading" role="status"><span class="spinner" aria-hidden="true"></span><span id="loading-text">正在连接地图资料…</span><button id="reload-button" hidden>重新加载</button></div>
 
         <div id="map-tooltip" class="map-tooltip" hidden></div>
 
@@ -267,7 +267,16 @@
 
   <div id="announcement" role="status" aria-live="polite" class="sr-only"></div>
 
-  <script type="module" src="./app.js"></script>
+  <script>
+    // This independent message also covers a blocked/failed module request.
+    document.getElementById('reload-button').addEventListener('click',function(){location.reload();});
+    setTimeout(function(){
+      if(document.documentElement.dataset.appStarted)return;
+      document.getElementById('loading-text').textContent='地图程序连接较慢或未能下载，请重试；也可尝试更换网络后打开。';
+      document.getElementById('reload-button').hidden=false;
+    },15000);
+  </script>
+  <script type="module" src="./app.js?rev=loading-20261003"></script>
 
 </body>
 

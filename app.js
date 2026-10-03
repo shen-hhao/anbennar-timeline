@@ -1,3 +1,4 @@
+import {loadData,loadAsset,dataAsset} from './data-loader.js';
 import {qualifiedPixelColor,qualificationSummary,qualificationPaintSignature,qualificationDisplayText,loadQualificationPreference,saveQualificationPreference} from './political-qualification.js';
 import {endpointReviewEntry} from './endpoint-review.js';
 import { createPublicDisplay } from './public-display.js';
@@ -34,6 +35,9 @@ const layers = {hypothesis:true, projection:false, continued:false, changes:true
 let atlas, names = {}, relations = {}, events = [], idPixels, ownerIndex, kinds, countryTags;
 let history, chronology, eras, baseAtlas, baseRelations, eu4IdsImage, endpointBundlePromise;
 let dossiers;
+const dossierRequests=new Map(),dossierErrors=new Map();
+let initialLoading=true;
+const initialProgress=new Map();
 let bookmarks=[];
 let publicView=createPublicDisplay(), publicEventObjects=new WeakSet(), publicStepObjects=new WeakSet();
 function publicRecord(record,surface) {
@@ -94,12 +98,21 @@ const flagMarkup = country => country.localPoliticalGroup ? '<span class="flag-p
 const relationType = relation => ({ puppet:'傀儡国', vassal: '附庸国', march: '卫戍国', personal_union: '被联统国', tributary_state_anb: '朝贡国' }[relation.type] || (relation.typeLabel?publicView.notice('relation-type-label:/'+String(relation.typeLabel).replaceAll('~','~0').replaceAll('/','~1'),relation.typeLabel).description:relation.type));
 
 async function json(file) {
-  const response = await fetch(dataUrl(file));
-  if (!response.ok) throw new Error(`${file}: ${response.status}`);
-  return response.json();
+  return loadData(file,{onProgress:(loaded,total)=>{
+    if(!initialLoading)return;
+    initialProgress.set(file,{loaded,total:total||dataAsset(file)?.bytes||0});
+    const rows=[...initialProgress.values()],bytes=rows.reduce((n,r)=>n+r.loaded,0);
+    $('loading-text').textContent=`正在读取地图资料 · 已读取 ${(bytes/1024/1024).toFixed(1)} MB`;
+  }});
 }
 function imageFile(file) {
-  return new Promise((resolve,reject) => { const img = new Image(); img.onload = () => resolve(img); img.onerror = () => reject(new Error(`图片加载失败: ${file}`)); img.src = dataUrl(file); });
+  return new Promise((resolve,reject) => {
+    const img=new Image();
+    const timer=setTimeout(()=>{img.src='';reject(new Error('省份底图连接超时，请重试或更换网络'));},30000);
+    img.onload=()=>{clearTimeout(timer);resolve(img);};
+    img.onerror=()=>{clearTimeout(timer);reject(new Error(`省份底图未能加载：${file}`));};
+    img.src=dataUrl(file);
+  });
 }
 function hasPoliticalView() {return ready&&atlas?.year===state.year&&atlas.stats.politicalProvinces>0;}
 async function loadEndpoint() {
@@ -157,12 +170,18 @@ function focusCoverage() {
 }
 async function init() {
   try {
-    const [mapData, chinese, subjectData, eventData, historyData, chronologyData, eraData, idsImage, dossierData] = await Promise.all([json('atlas.json'),json('names-zh.json'),json('subjects.json'),json('events.json'),json('history.json'),json('western-chronology.json'),json('eras.json'),imageFile('province-id.png'),json('country-histories.json')]);
+    document.documentElement.dataset.appStarted='true';
+    const [mapData,chinese,subjectData,eventData,historyData,chronologyData,eraData,idsImage,dossierData,semantics,reviews,bookmarkData,copy] = await Promise.all([
+      json('atlas.json'),json('names-zh.json'),json('subjects.json'),json('events.json'),json('history.json'),json('western-chronology.json'),json('eras.json'),imageFile('province-id.png'),json('dossier-index.json'),json('relation-semantics.json'),json('endpoint-review.json'),json('bookmarks.json'),json('map-copy.json')
+    ]);
+    initialLoading=false;
+    $('loading-text').textContent='地图资料已就绪，正在绘制省份…';
+    await new Promise(resolve=>requestAnimationFrame(resolve));
     dossiers=dossierData;
-    relationSemanticRegistry=await json('relation-semantics.json');
-    endpointReviewRegistry=await json('endpoint-review.json');
-    bookmarks=validateBookmarks(await json('bookmarks.json'),eventData);
-    publicView=createPublicDisplay({copy:await json('public-copy.json'),steps:chronologyData.steps});
+    relationSemanticRegistry=semantics;
+    endpointReviewRegistry=reviews;
+    bookmarks=validateBookmarks(bookmarkData,eventData);
+    publicView=createPublicDisplay({copy,steps:chronologyData.steps});
     publicEventObjects=new WeakSet(eventData);publicStepObjects=new WeakSet(chronologyData.steps);
     atlas = mapData; baseAtlas=mapData; eu4IdsImage=idsImage; chronology=chronologyData; eras=eraData; names = chinese; history=historyData; events = eventData.sort((a,b) => a.year-b.year);
     relations = Object.fromEntries(subjectData.filter(r => atlas.countries[r.subject] && atlas.countries[r.overlord]).map(r => [r.subject,r]));
@@ -177,6 +196,8 @@ async function init() {
     $('endpoint-remote').checked=params.get('remote')==='1';
     setYear(params.has('year')&&validYear(params.get('year'))?Number(params.get('year')):FIRST_YEAR);
     await pendingView;
+    if(!ready)return;
+    document.documentElement.dataset.mapReadyMs=String(Math.round(performance.now()));
     if(params.has('country'))selectCountry(params.get('country'),{focus:true});
     if(params.has('dossier'))openDossier(params.get('dossier'));
     if(params.has('event'))focusEvent(params.get('event'));
@@ -184,7 +205,8 @@ async function init() {
     $('announcement').textContent = `地图已就绪。${state.year} 年，${atlas.coverage.title}，共 ${atlas.stats.countries} 个国家与地方政治主体。`;
   } catch (error) {
     console.error(error);
-    $('loading-text').textContent = '地图资料未能加载，请确认本地服务和数据文件完整。';
+    initialLoading=false;
+    $('loading-text').textContent = `地图暂未加载成功：${error.message}。已下载的压缩资料会尽量保留，点击重试即可。`;
     document.querySelector('.spinner').hidden = true;
     $('reload-button').hidden = false;
     $('map-status').textContent = '加载失败';
@@ -688,13 +710,31 @@ function switchTab(tab) {
   for(const name of ['country','events','chronicle']){$(`${name}-tab`).setAttribute('aria-selected',String(name===tab));$(`${name}-tab`).tabIndex=name===tab?0:-1;$(`${name}-panel`).hidden=name!==tab;}
 }
 
+function requestDossier(country) {
+  if(dossierRequests.has(country.tag))return dossierRequests.get(country.tag);
+  const task=loadAsset(country.asset,{name:country.nameZh||country.name||country.tag}).then(full=>{
+    if(full.tag!==country.tag)throw new Error('国家沿革文件与所选国家不一致');
+    const index=dossiers.countries.findIndex(c=>c.tag===country.tag);
+    dossiers.countries[index]=full;dossierErrors.delete(country.tag);
+  }).catch(error=>{dossierErrors.set(country.tag,error.message);}).finally(()=>{
+    dossierRequests.delete(country.tag);
+    if(state.dossier===country.tag)renderDossier();
+  });
+  dossierRequests.set(country.tag,task);return task;
+}
 function renderDossier() {
   if(!dossiers)return;
   const country=findDossier(dossiers,state.dossier);
   $('dossier-filters').hidden=Boolean(country);
   if(!country){
     const matches=searchDossiers(dossiers,$('dossier-search').value,$('dossier-group').value);
-    $('dossier-content').innerHTML=`<p class="dossier-count">${matches.length} 个档案 · ${matches.filter(c=>c.reviewLevel==='reviewed').length} 个已作专题梳理</p><p class="dossier-intro">先选国家，再沿记录查看它的变化。开局档案仍待考证；暂时延续旧边界不代表历史上没有变化。</p><div class="dossier-list">${matches.map(c=>`<button data-dossier="${escape(c.tag)}">${flagMarkup(c)}<span>${escape(countryName(c))}<small>${escape(c.name)}</small><small>${c.reviewLevel==='reviewed'?'专题梳理':'开局档案 · 待考证'} · ${c.records.length} 条${c.imperialAtStart?' · 开局持有帝国省份':''}</small></span><span aria-hidden="true">›</span></button>`).join('')||'<p>没有匹配的国家。</p>'}</div>`;
+    $('dossier-content').innerHTML=`<p class="dossier-count">${matches.length} 个档案 · ${matches.filter(c=>c.reviewLevel==='reviewed').length} 个已作专题梳理</p><p class="dossier-intro">先选国家，再沿记录查看它的变化。开局档案仍待考证；暂时延续旧边界不代表历史上没有变化。</p><div class="dossier-list">${matches.map(c=>`<button data-dossier="${escape(c.tag)}">${flagMarkup(c)}<span>${escape(countryName(c))}<small>${escape(c.name)}</small><small>${c.reviewLevel==='reviewed'?'专题梳理':'开局档案 · 待考证'} · ${c.recordCount??c.records.length} 条${c.imperialAtStart?' · 开局持有帝国省份':''}</small></span><span aria-hidden="true">›</span></button>`).join('')||'<p>没有匹配的国家。</p>'}</div>`;
+    return;
+  }
+  if(country.asset){
+    const error=dossierErrors.get(country.tag);
+    $('dossier-content').innerHTML=`<article class="dossier-detail"><button class="text-button" data-dossier-back>← 全部国家</button><h1>${escape(countryName(country))}</h1><p role="status">${error?`沿革资料暂未加载成功：${escape(error)}`:'正在读取这个国家的沿革资料…地图仍可继续浏览。'}</p>${error?'<button class="text-button" data-retry-dossier>重试读取沿革</button>':''}</article>`;
+    if(!error)void requestDossier(country);
     return;
   }
   const previous=country.records.filter(r=>r.year<state.year).at(-1),next=country.records.find(r=>r.year>state.year);
@@ -853,6 +893,7 @@ document.addEventListener('click',event=>{
   const target=event.target.closest('button');
   if(target?.dataset.bookmark)navigateBookmark(target.dataset.bookmark);
   else if(target?.hasAttribute('data-retry-imperial'))loadImperialData();
+  else if(target?.hasAttribute('data-retry-dossier')){dossierErrors.delete(state.dossier);renderDossier();}
   else if(target?.dataset.dossier)openDossier(target.dataset.dossier);
   else if(target?.hasAttribute('data-dossier-back')){state.dossier=null;renderDossier();document.querySelector('.sidebar-scroll').scrollTop=0;}
   else if(target?.hasAttribute('data-dossier-focus')){const country=currentDossierCountry(findDossier(dossiers,state.dossier),atlas);if(country)focusCountry(country.tag);}
@@ -878,7 +919,7 @@ $('sources-button').addEventListener('click',()=>$('sources-dialog').showModal()
 $('sources-dialog').addEventListener('click',event=>{if(event.target===$('sources-dialog')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)event.target.close();}});
 $('dossier-search').addEventListener('input',renderDossier);
 $('dossier-group').addEventListener('change',renderDossier);
-$('reload-button').addEventListener('click',()=>location.reload());
+
 new ResizeObserver(resize).observe($('map-stage'));
 initializeMapFullscreen({document});
 

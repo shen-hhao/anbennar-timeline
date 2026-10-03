@@ -1,3 +1,4 @@
+import {loadData} from './data-loader.js';
 const statusNames={'raw-projection':'原始投影','previous-reviewed':'既有审阅','cartographic-candidate':'本次投票','remote-without-valid-land-match':'远海待核'};
 const confidenceNames={'medium':'中等置信','low':'低置信','very-low':'极低置信','reconstructed':'强对应重建','hypothesis':'推测对应','setup':'来源开局'};
 export const normalizeSearch=value=>String(value??'').normalize('NFD').replace(/\p{Diacritic}/gu,'').toLocaleLowerCase().trim();
@@ -14,7 +15,7 @@ export function matchingRows(rows,query,status,countries){
 async function start(){
   const $=id=>document.getElementById(id);
   const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined&&text!==null)node.textContent=String(text);if(cls)node.className=cls;return node;};
-  const json=async url=>{const response=await fetch(url);if(!response.ok)throw new Error(`${url}：HTTP ${response.status}`);return response.json();};
+  const json=url=>loadData(url.replace('./data/',''));
   try{
     const [ledger,endpoint,identity]=await Promise.all([json('./data/endpoint-correspondence.json'),json('./data/endpoint-1820.json'),json('./data/endpoint-country-identities.json')]);
     if(ledger.schemaVersion!==1||!Array.isArray(ledger.rows)||ledger.rows.length!==4971||new Set(ledger.rows.map(r=>r.provinceId)).size!==4971)throw new Error('全图对应表版本或省份数量不匹配。');

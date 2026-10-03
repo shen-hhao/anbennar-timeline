@@ -1,3 +1,4 @@
+import {loadData} from './data-loader.js';
 const $ = id => document.getElementById(id);
 const pageSize = 20;
 let index;
@@ -173,9 +174,7 @@ $('reference-previous').addEventListener('click', () => { page -= 1; renderResul
 $('reference-next').addEventListener('click', () => { page += 1; renderResults(); });
 
 try {
-  const response = await fetch(new URL('./data/reference-index.json', import.meta.url));
-  if (!response.ok) throw new Error(`Reference index request failed: ${response.status}`);
-  index = await response.json();
+  index = await loadData('reference-index.json');
   if (!Array.isArray(index.entries)) throw new Error('Reference index entries are missing');
   renderSummary();
   populateFilters();
