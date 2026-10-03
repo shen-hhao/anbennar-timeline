@@ -1,5 +1,5 @@
 {
-  "sourceCommit": "66b35c9ee0b9119d90ef9dfb03ffca9ac8e54553",
+  "sourceCommit": "296e2ea08592a055660cd6868dda0d175e53d680",
   "repository": "https://github.com/shen-hhao/anbennar-timeline",
   "releaseId": "community-preview-20260923",
   "files": [
@@ -15,8 +15,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 96387,
-      "sha256": "b99547e1ce2d906d0182811ff5180c4330a765f60dcac9b72ec169001fb3d819"
+      "bytes": 96700,
+      "sha256": "fbd16472a2a33f9a79e4fd3478aab061c18b70c473d6ca51ce83c3a4c1e73775"
     },
     {
       "path": "bookmarks.js",
@@ -21020,8 +21020,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 22205,
-      "sha256": "ef58904fdeb867f87955c79a626eba0c8ab1e3ec2e938bd73f8e47fb3a43049e"
+      "bytes": 22224,
+      "sha256": "f18307b430d3b57fca1cf1561b01f0ba06fd0d12ee579f0e2be01d2876a5dacd"
     },
     {
       "path": "loading-assets.js",
@@ -21115,8 +21115,8 @@
     },
     {
       "path": "release.json",
-      "bytes": 852,
-      "sha256": "f0dfaafbbaceb54de9e0d8c14f92c262fe6928be1115a9021f7cd8ad43595cef"
+      "bytes": 864,
+      "sha256": "06830106e9c63a2c9b4cd3232a807d8583e89deeabf635b3339412582276b96e"
     },
     {
       "path": "render-quality.js",

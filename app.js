@@ -24,7 +24,6 @@ import { buildProvincePaintTiles } from './province-boundary-renderer.js';
 import { provinceBoundaryStyle } from './province-boundary-style.js';
 import { relativeLuminance } from './overlay-contrast.js';
 import { renderSurfaceSize } from './render-quality.js';
-import { initializeMapFullscreen } from './fullscreen.js';
 import { buildEndpointView } from './endpoint.js';
 import { buildRelationSemantics, relationSemanticsMarkup } from './relation-semantics.js';
 
@@ -921,7 +920,6 @@ $('dossier-search').addEventListener('input',renderDossier);
 $('dossier-group').addEventListener('change',renderDossier);
 
 new ResizeObserver(resize).observe($('map-stage'));
-initializeMapFullscreen({document});
 
 function installWebTools() {
   const registry=document.modelContext;if(!registry?.registerTool)return;
@@ -933,3 +931,11 @@ function installWebTools() {
   for(const tool of tools){try{Promise.resolve(registry.registerTool({...tool,annotations:{readOnlyHint:false,untrustedContentHint:false}},{signal:controller.signal})).catch(()=>{});}catch{/* Optional browser API. */}}
 }
 init();
+// Optional controls must never gate the map's module graph or data loading.
+// A blocked, failed or pending import leaves only the fullscreen button hidden.
+import('./fullscreen.js').then(({initializeMapFullscreen})=>{
+  initializeMapFullscreen({document});
+  $('map-fullscreen').hidden=false;
+}).catch(error=>{
+  console.warn('地图全屏工具未能加载，地图浏览仍可继续。',error);
+});
