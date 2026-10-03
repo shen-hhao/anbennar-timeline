@@ -61,6 +61,10 @@ package.json
 
 本方案**不提交 `.github/workflows/`，不配置自定义 Actions、自动检查或自动部署工作流**。Pages采用从 `gh-pages` 的 `/ (root)` 发布，使用默认 `github.io` 地址。GitHub自身执行分支式Pages所需的内建部署流程；这是本项目已选择的发布方式，`.nojekyll` 不会取消平台部署。
 
+## 地图加载修复
+
+2026-10-03：首屏资料压缩、国家沿革按需读取、浏览器缓存及超时重试；地图数据与历史限定保持不变。维护时若更新公开 JSON，请运行 `npm run build:loading` 后再检查与发布。详情见[加载与备用托管说明](docs/LOADING_AND_HOSTING.md)。
+
 ## 在本机运行与核验
 
 `main` 包含实际站点 `dist/`、指南、脚本和相关测试。以下命令在仓库根目录执行。

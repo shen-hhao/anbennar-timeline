@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "check": "node scripts/check-public-site.mjs",
-    "test": "node --test tests/model.test.mjs tests/viewport.test.mjs tests/qualification-visibility.test.mjs"
+    "test": "node --test tests/model.test.mjs tests/viewport.test.mjs tests/qualification-visibility.test.mjs tests/loading.test.mjs",
+    "build:loading": "node scripts/build-loading-assets.mjs"
   }
 }

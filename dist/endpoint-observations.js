@@ -1,3 +1,4 @@
+import {loadData} from './data-loader.js';
 import {createPublicDisplay} from './public-display.js';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -31,4 +32,4 @@ function showProvince(id){
 document.addEventListener('click',event=>{const button=event.target.closest('[data-province]');if(button)showProvince(button.dataset.province);});
 for(const id of ['query','scope','filter'])$(id).addEventListener('input',()=>{page=0;render();});
 $('previous').addEventListener('click',()=>{page--;render();});$('next').addEventListener('click',()=>{page++;render();});
-try{const response=await fetch('./data/sarhal-endpoint-observations.json');if(!response.ok)throw new Error(response.status);data=await response.json();const [copy,chronology]=await Promise.all(['public-copy','western-chronology'].map(async file=>{const r=await fetch(`./data/${file}.json`);if(!r.ok)throw Error(file);return r.json();}));publicView=createPublicDisplay({copy,steps:chronology.steps});if(params.has('country')||params.has('province')){$('scope').value='all';$('filter').value='all';}if(params.has('province'))$('query').value=params.get('province');render();if(params.has('province'))showProvince(params.get('province'));}catch(error){$('count').textContent='逐省资料读取失败，请刷新或检查本地服务。';console.error(error);}
+try{data=await loadData('sarhal-endpoint-observations.json');const [copy,chronology]=await Promise.all(['public-copy','western-chronology'].map(file=>loadData(`${file}.json`)));publicView=createPublicDisplay({copy,steps:chronology.steps});if(params.has('country')||params.has('province')){$('scope').value='all';$('filter').value='all';}if(params.has('province'))$('query').value=params.get('province');render();if(params.has('province'))showProvince(params.get('province'));}catch(error){$('count').textContent='逐省资料读取失败，请刷新或检查本地服务。';console.error(error);}

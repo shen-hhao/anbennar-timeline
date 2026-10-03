@@ -1,3 +1,4 @@
+import {loadData} from './data-loader.js';
 import {qualificationDisplayText} from './political-qualification.js';
 import {endpointReviewEntry} from './endpoint-review.js';
 import {supersededModelNote} from './records.js';
@@ -44,8 +45,8 @@ function showProvince(){
 }
 function filterProvinces(){const q=$('audit-search').value.trim().toLocaleLowerCase(),selected=$('audit-province').value;rows=data.provinces.filter(p=>`${p.id} ${p.name} ${p.nameZh} ${p.region}`.toLocaleLowerCase().includes(q));$('audit-province').innerHTML=rows.map(p=>`<option value="${p.id}">${p.id} · ${esc(p.nameZh?p.nameZh+' / '+p.name:p.name)}</option>`).join('');if(rows.some(p=>String(p.id)===selected))$('audit-province').value=selected;showProvince();}
 try{
- [data,assessments,research,actors,namesZh]=await Promise.all(['continuity','reconstruction-assessments','research-index','atlas','names-zh'].map(async file=>{const r=await fetch(`./data/${file}.json`);if(!r.ok)throw new Error(file);return r.json();}));
- actors=actors.countries;chronology=await (await fetch('./data/western-chronology.json')).json();endpointReviewRegistry=await (await fetch('./data/endpoint-review.json')).json();publicView=createPublicDisplay({copy:await (await fetch('./data/public-copy.json')).json(),steps:chronology.steps});actors={...actors,...chronology.actors};for(const [tag,actor] of Object.entries(actors))actor.nameZh ||= namesZh.countries[tag];for(const p of data.provinces)p.nameZh=namesZh.provinces[p.id]||'';
+ [data,assessments,research,actors,namesZh]=await Promise.all(['continuity','reconstruction-assessments','research-index','atlas','names-zh'].map(file=>loadData(`${file}.json`)));
+ actors=actors.countries;chronology=await loadData('western-chronology.json');endpointReviewRegistry=await loadData('endpoint-review.json');publicView=createPublicDisplay({copy:await loadData('public-copy.json'),steps:chronology.steps});actors={...actors,...chronology.actors};for(const [tag,actor] of Object.entries(actors))actor.nameZh ||= namesZh.countries[tag];for(const p of data.provinces)p.nameZh=namesZh.provinces[p.id]||'';
  $('audit-summary').innerHTML=`<div><strong>${data.subjectCount}</strong><small>主体已作推演裁决</small></div><div><strong>${data.provinceCount}</strong><small>逐省连续追溯</small></div><div><strong>${data.checkedYears}</strong><small>年份逐一检查</small></div><div><strong>${data.issues.length}</strong><small>模型一致性错误</small></div>`;
  const corrected=data.endpointInferences.filter(item=>item.reviewType==='boundary-correspondence-correction').length;
  $('audit-policy').textContent=`${publicView.notice(noticeKey('continuity','policy'),data.policy).description} ${data.inferredEndpointProvinceIds.length-corrected}处1820原始空白或冲突采用显式推测${corrected?`，另有${corrected}处已有归属的跨图对应修正`:""}，仍有${data.unresolvedEndpointProvinceIds.length}处未分配。${data.unresolvedSeamProvinceIds?`另按归属、端点和外交关系合并统计，${data.seamExceptions.length}处接缝登记中仍有${data.unresolvedSeamProvinceIds.length}省待补证。`:''}原连续模型核验：${data.status==='passed'?'通过':'存在待修复问题'}；该状态仅对应原报告输入，不表示历史逐年确证或本轮全部验收完成。`;

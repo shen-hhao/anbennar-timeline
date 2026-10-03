@@ -1,9 +1,9 @@
+import {loadData} from './data-loader.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export async function loadRegionConsistency(actors){
   const section=document.getElementById('audit-regions');
   try{
-    const response=await fetch('./data/region-consistency.json');if(!response.ok)throw new Error('Region audit unavailable');
-    const data=await response.json(),name=tag=>tag?(actors[tag]?.nameZh||actors[tag]?.name||tag):'来源未指定控制者';
+    const data=await loadData('region-consistency.json'),name=tag=>tag?(actors[tag]?.nameZh||actors[tag]?.name||tag):'来源未指定控制者';
     const referenceNames={north_salahad_superregion:'北萨拉哈德',rahen_superregion:'拉亨',middle_serpentspine_superregion:'中蛇脊',west_serpentspine_superregion:'西蛇脊',deepwoods_portal_superregion:'深木门户'};
     const label=g=>data.groups[g]?.label||referenceNames[g]||g;
     const referenceCount=data.referenceProvinceCount??data.coveredProvinceCount-data.coreProvinceCount;
